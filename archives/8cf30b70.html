@@ -1,0 +1,319 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>使用Github+PicGo搭建个人图床 | Boilde Yakult</title><meta name="keywords" content="个人图床,教程"><meta name="author" content="水煮养乐多"><meta name="copyright" content="水煮养乐多"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="写在开头​每个人都需要一个自己的个人图床，什么是图床？  图床就是把图片存到服务器上，通过一个公开的链接地址进行访问或者下载 平时我们将图片夹杂在文章、文档、公众号、博客当中，一般情况下这样似乎没有任何问题，可试想一下若我们需要同时维护多份，不停地在不同渠道重复上传、编辑，图片也会散落各地，难以维护管理，这时候若有个统一的存储地方就可以很轻松维护。 我们将图片直接放到在线静态页面当中的话，在访问时">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Github+PicGo搭建个人图床">
+<meta property="og:url" content="https://boiled-yakult.github.io/archives/8cf30b70.html">
+<meta property="og:site_name" content="Boilde Yakult">
+<meta property="og:description" content="写在开头​每个人都需要一个自己的个人图床，什么是图床？  图床就是把图片存到服务器上，通过一个公开的链接地址进行访问或者下载 平时我们将图片夹杂在文章、文档、公众号、博客当中，一般情况下这样似乎没有任何问题，可试想一下若我们需要同时维护多份，不停地在不同渠道重复上传、编辑，图片也会散落各地，难以维护管理，这时候若有个统一的存储地方就可以很轻松维护。 我们将图片直接放到在线静态页面当中的话，在访问时">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Boiled-Yakult/picgoIMG/img/20220410234015.png">
+<meta property="article:published_time" content="2022-04-07T07:59:56.000Z">
+<meta property="article:modified_time" content="2022-06-09T01:45:34.196Z">
+<meta property="article:author" content="水煮养乐多">
+<meta property="article:tag" content="个人图床">
+<meta property="article:tag" content="教程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Boiled-Yakult/picgoIMG/img/20220410234015.png"><link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Boiled-Yakult/picgoIMG/img/3316496_abacate_avocado_avocados_fruit_icon.png"><link rel="canonical" href="https://boiled-yakult.github.io/archives/8cf30b70"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="G5vA4_38wL8egY8Id_huJLzmbNP9zALSlYG3QXlYQuE"/><meta name="baidu-site-verification" content="code-YKm9l7emKI"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":60,"position":"top","messagePrev":"该文章发布或更新于","messageNext":"天前，请以最新文章为主，本文仅提供参考"},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '使用Github+PicGo搭建个人图床',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-06-09 09:45:34'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/self.css"><link rel="stylesheet" href="/css/icon.css" media="defer" onload="this.media='all"><link rel="stylesheet" href="//at.alicdn.com/t/font_3265059_92p6yi903w4.css"><script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><script async src="/js/weather.js"></script><link rel="stylesheet" href="/css/font.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="Boilde Yakult" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">22</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">12</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw iconfont icon-zhuye"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw iconfont icon-icon-hengxiangshijianzhou"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw iconfont icon-biaoqian"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw iconfont icon-fenlei"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw iconfont icon-home_icon_sweet"></i><span> sweet time</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/books/"><i class="fa-fw iconfont icon-shudan-"></i><span> 书单</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw iconfont icon--"></i><span> 电影</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw iconfont icon-kaishiyouxi"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/%E9%9B%86%E9%82%AE%E5%86%8C/"><i class="fa-fw iconfont icon--"></i><span> 集邮册</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw iconfont icon-lianjie"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw iconfont icon-yunxin-guanyuwomen-"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/Boiled-Yakult/picgoIMG/img/20220410234015.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Boilde Yakult</a><div id="he-plugin-simple"></div></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw iconfont icon-zhuye"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw iconfont icon-icon-hengxiangshijianzhou"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw iconfont icon-biaoqian"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw iconfont icon-fenlei"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw iconfont icon-home_icon_sweet"></i><span> sweet time</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/books/"><i class="fa-fw iconfont icon-shudan-"></i><span> 书单</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw iconfont icon--"></i><span> 电影</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw iconfont icon-kaishiyouxi"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/%E9%9B%86%E9%82%AE%E5%86%8C/"><i class="fa-fw iconfont icon--"></i><span> 集邮册</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw iconfont icon-lianjie"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw iconfont icon-yunxin-guanyuwomen-"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">使用Github+PicGo搭建个人图床</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-04-07T07:59:56.000Z" title="发表于 2022-04-07 15:59:56">2022-04-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-06-09T01:45:34.196Z" title="更新于 2022-06-09 09:45:34">2022-06-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/">图床搭建</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">944</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="使用Github+PicGo搭建个人图床"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="写在开头​"><a href="#写在开头​" class="headerlink" title="写在开头​"></a>写在开头​</h3><p>每个人都需要一个自己的个人图床，什么是图床？</p>
+<ul>
+<li>图床就是把图片存到服务器上，通过一个公开的链接地址进行访问或者下载</li>
+<li>平时我们将图片夹杂在文章、文档、公众号、博客当中，一般情况下这样似乎没有任何问题，可试想一下若我们需要同时维护多份，不停地在不同渠道重复上传、编辑，图片也会散落各地，难以维护管理，这时候若有个统一的存储地方就可以很轻松维护。</li>
+<li>我们将图片直接放到在线静态页面当中的话，在访问时需要等待全部资源加载，然而一般页面都是图片较大。当我们将图片分离后异步加载，再通过CDN加速，能够大幅提升页面的访问速度。<h3 id="Github-PicGo"><a href="#Github-PicGo" class="headerlink" title="Github+PicGo"></a>Github+PicGo</h3>除此之外还有阿里云、腾讯云之类的，收不收费忘记了，反正Github又不收费😅</li>
+<li><strong>下载PicGo客户端</strong><br>在Github里搜索PicGO<br><img src="https://cdn.jsdelivr.net/gh/Boiled-Yakult/picgoIMG/img/20220410234322.png"><br>PicGo的Github<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/Molunerfinn/PicGo">仓库地址</a>🙋，直接点击访问也可以。<br>在右侧<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/Molunerfinn/PicGo/releases">release</a>页面选择自己系统的版本下载安装即可。<br><img src="https://cdn.jsdelivr.net/gh/Boiled-Yakult/picgoIMG/img/20220411000236.png"><br>安装完成打开，软件页面大概就是这个样子：<br><img src="https://cdn.jsdelivr.net/gh/Boiled-Yakult/picgoIMG/img/20220411000328.png"><br>在连接格式可以自由选择你想要的图片链接格式，也支持剪切板图片上传，搭配<code>Snipaste</code>用起来简直不要太棒🥂</li>
+<li><strong>开始使用</strong><br><img src="https://cdn.jsdelivr.net/gh/Boiled-Yakult/picgoIMG/img/20220411000414.png"><br>支持很多图床，这里你需要哪个勾选哪个就可以，本文以Github为例。<ul>
+<li>在Github新建一个仓库，存放图片资源，这个部分如果不会的话建议自行检索。</li>
+<li>配置PicGO上Github仓库<br><img src="https://cdn.jsdelivr.net/gh/Boiled-Yakult/picgoIMG/img/20220411000512.png"><ul>
+<li>仓库名就直接复制粘贴刚才新建的仓库名就可以，复制下来把&#x2F;符号两边的空格删掉</li>
+<li><img src="https://cdn.jsdelivr.net/gh/Boiled-Yakult/picgoIMG/img/20220411000549.png"></li>
+<li>分支名：main</li>
+<li>Token：setting—&gt;开发者设置—&gt;个人token—&gt;创建新Token<br><img src="https://cdn.jsdelivr.net/gh/Boiled-Yakult/picgoIMG/img/20220411000622.png"><br>把生成好的Token复制粘贴进来就可以</li>
+<li>存储路径(这是图片在你Github仓库的位置)：img&#x2F;</li>
+<li><del>jsDelivr充当CDN</del><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.jsdelivr.com/?docs=gh">获取CDN地址</a><br><del>选取第一个地址规则，把user和后面的都删掉改成你的仓库名</del></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><em><strong>之前我没有配置过这个域名，图片传上去打开博客能正常显示，加上这个域名之后，挂梯子就打不开网页了，我删除规则之后能打开，但是之前用这个规则存储的图片所在的页面是无法访问的，所以😶‍🌫️</strong></em></p>
+<ul>
+<li>2022.04.10纠正<br>关于CDN，之前我没有搞清楚是用来做什么的，今天专门去查了一下，直观上讲是用来提高加载速度，之前加上CDN的加速域名后无法访问是由于我在写这篇博客之前一直都是没有使用CDN加速的，配置了CDN之后图片的存储规则发生了更改，导致之前的文章也好，博客的配置文章也好，原来的存储的图片链接失效了，所以无法访问。今天晚上提溜着蒜瓣脑袋把所有图片改成了使用CDN加速之后的新地址，目前为止，本地预览正常。</li>
+<li>所以，那个CDN规则看个人喜好吧，但是千万不要一开始没加，过了一阵子又加上，会秃头的😒😒😒<h2 id="写在结尾"><a href="#写在结尾" class="headerlink" title="写在结尾"></a>写在结尾</h2>至此，我们已经完成整个图床的搭建，可以开始快乐地玩耍了，后续我会再介绍基于图床的其他用途（如有时间写的话…）。如在搭建过程中有如任何问题也可以在评论区评论与我沟通哦～</li>
+<li>2022.06.09<br>cdn更新，cdn.jsdelivr.net 改为 fastly.jsdelivr.net<br></li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined" rel="external nofollow noreferrer">水煮养乐多</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://boiled-yakult.github.io/archives/8cf30b70.html">https://boiled-yakult.github.io/archives/8cf30b70.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://boiled-yakult.github.io" target="_blank">Boilde Yakult</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E4%B8%AA%E4%BA%BA%E5%9B%BE%E5%BA%8A/">个人图床</a><a class="post-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/">教程</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/Boiled-Yakult/picgoIMG/img/20220410234015.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/archives/8da2c4c2.html"><img class="prev-cover" src="https://cdn.jsdelivr.net/gh/Boiled-Yakult/picgoIMG/img/17.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Butterfly自用手册</div></div></a></div><div class="next-post pull-right"><a href="/archives/62fc2fe9.html"><img class="next-cover" src="https://cdn.jsdelivr.net/gh/Boiled-Yakult/picgoIMG/img/10.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">使用vscode开始Markdown写作之旅</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city" data-uid="MTAyMC81NTc3Ni8zMjI0Mg=="></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">水煮养乐多</div><div class="author-info__description">十四亿分之一 很高兴认识你</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">22</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">12</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/Boiled-Yakult/"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Boiled-Yakult/Boiled-Yakult.github.io.git" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="iconfont icon-github"></i></a><a class="social-icon" href="Gmail:lk1981640629@gmail.com" rel="external nofollow noreferrer" target="_blank" title=""><i class="iconfont icon-gmail"></i></a><a class="social-icon" href="https://cdn.jsdelivr.net/gh/Boiled-Yakult/picgoIMG/img/20220416103133.png" rel="external nofollow noreferrer" target="_blank" title="QQ"><i class="iconfont icon-QQ"></i></a><a class="social-icon" href="https://space.bilibili.com/384210387?spm_id_from=333.1007.0.0" rel="external nofollow noreferrer" target="_blank" title="bilibili"><i class="iconfont icon-bilibili"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">“虚惊一场”<br>这四个字是人世间最好的成语，比起什么兴高采烈，五彩缤纷，一帆风顺都要美好百倍。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E5%BC%80%E5%A4%B4%E2%80%8B"><span class="toc-number">1.</span> <span class="toc-text">写在开头​</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Github-PicGo"><span class="toc-number">2.</span> <span class="toc-text">Github+PicGo</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E7%BB%93%E5%B0%BE"><span class="toc-number"></span> <span class="toc-text">写在结尾</span></a></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/archives/6ad93d68.html" title="C#入门基础知识"><img src="https://www.vippng.com/png/detail/398-3984434_c-programming-png.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C#入门基础知识"/></a><div class="content"><a class="title" href="/archives/6ad93d68.html" title="C#入门基础知识">C#入门基础知识</a><time datetime="2022-06-25T08:07:24.000Z" title="发表于 2022-06-25 16:07:24">2022-06-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/14a0773e.html" title="嵌入式开发面试"><img src="https://fastly.jsdelivr.net/gh/Boiled-Yakult/picgoIMG/img/v2-dfc51107c1b18337fa6ea3498064ea43_1440w.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="嵌入式开发面试"/></a><div class="content"><a class="title" href="/archives/14a0773e.html" title="嵌入式开发面试">嵌入式开发面试</a><time datetime="2022-06-14T04:53:51.000Z" title="发表于 2022-06-14 12:53:51">2022-06-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/5fc85bc.html" title="Butterfly字体修改成鸿蒙OS字体"><img src="https://fastly.jsdelivr.net/gh/Boiled-Yakult/picgoIMG/img/20220612132726.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Butterfly字体修改成鸿蒙OS字体"/></a><div class="content"><a class="title" href="/archives/5fc85bc.html" title="Butterfly字体修改成鸿蒙OS字体">Butterfly字体修改成鸿蒙OS字体</a><time datetime="2022-06-12T05:25:07.000Z" title="发表于 2022-06-12 13:25:07">2022-06-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/88595fc7.html" title="Vscode终端调用GitBush"><img src="https://pic3.zhimg.com/v2-2c4b8b19cf865bcbfc67c86dfcf30a8a_1440w.jpg?source=172ae18b" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Vscode终端调用GitBush"/></a><div class="content"><a class="title" href="/archives/88595fc7.html" title="Vscode终端调用GitBush">Vscode终端调用GitBush</a><time datetime="2022-06-10T06:00:22.000Z" title="发表于 2022-06-10 14:00:22">2022-06-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/b52afdc2.html" title="部署到Vercel"><img src="https://cdn.jsdelivr.net/gh/Boiled-Yakult/picgoIMG/img/20220608152714.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="部署到Vercel"/></a><div class="content"><a class="title" href="/archives/b52afdc2.html" title="部署到Vercel">部署到Vercel</a><time datetime="2022-06-08T07:07:15.000Z" title="发表于 2022-06-08 15:07:15">2022-06-08</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 水煮养乐多</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a href="https://boiled-yakult.github.io/">blog</a>🥂!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (true){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function loadLivere () {
+  if (typeof LivereTower === 'object') {
+    window.LivereTower.init()
+  }
+  else {
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  }
+}
+
+if ('Livere' === 'Livere' || !false) {
+  if (false) btf.loadComment(document.getElementById('lv-container'), loadLivere)
+  else loadLivere()
+}
+else {
+  function loadOtherComment () {
+    loadLivere()
+  }
+}</script></div><script src="/js/self.js"></script><script src="https://myhkw.cn/player/js/jquery.min.js" type="text/javascript"></script><script src="https://myhkw.cn/api/player/164786043754" id="myhk" key="164786043754" m="1"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;archives/8da2c4c2.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt=""><img width="48" height="48" src="https://cdn.jsdelivr.net/gh/Boiled-Yakult/picgoIMG/img/17.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-04-15</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;archives/8da2c4c2.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="">Butterfly自用手册</a><div class="blog-slider__text">主题修理历程，🦄-1-1-1-1...</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;archives/8da2c4c2.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;archives/14a0773e.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt=""><img width="48" height="48" src="https://fastly.jsdelivr.net/gh/Boiled-Yakult/picgoIMG/img/v2-dfc51107c1b18337fa6ea3498064ea43_1440w.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-06-14</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;archives/14a0773e.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="">嵌入式开发面试</a><div class="blog-slider__text">嵌入式面试基础</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;archives/14a0773e.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;archives/d6e2db9e.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt=""><img width="48" height="48" src="https://cdn.jsdelivr.net/gh/Boiled-Yakult/picgoIMG/img/backiee-228918.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-05-11</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;archives/d6e2db9e.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="">Hypertension</a><div class="blog-slider__text">Good Day&gt;&gt;</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;archives/d6e2db9e.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;archives/6ad93d68.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt=""><img width="48" height="48" src="https://www.vippng.com/png/detail/398-3984434_c-programming-png.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-06-25</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;archives/6ad93d68.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="">C#入门基础知识</a><div class="blog-slider__text">如题，对博主学习C#编程语言做个笔记，因为大学期间学习过C#，本篇只做简单记录。</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;archives/6ad93d68.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;archives/5fc85bc.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt=""><img width="48" height="48" src="https://fastly.jsdelivr.net/gh/Boiled-Yakult/picgoIMG/img/20220612132726.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-06-12</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;archives/5fc85bc.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="">Butterfly字体修改成鸿蒙OS字体</a><div class="blog-slider__text">修改butterfly默认字体为HarmonyOS_Sans字体</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;archives/5fc85bc.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="">详情       </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><!-- hexo injector body_end end --></body></html>
