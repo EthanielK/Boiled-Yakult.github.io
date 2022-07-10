@@ -6,7 +6,7 @@
   <link href="https://boiled-yakult.github.io/atom.xml" rel="self"/>
   
   <link href="https://boiled-yakult.github.io/"/>
-  <updated>2022-06-29T13:15:40.000Z</updated>
+  <updated>2022-07-10T02:48:14.000Z</updated>
   <id>https://boiled-yakult.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Rainmeter桌面</title>
+    <link href="https://boiled-yakult.github.io/archives/3af72432.html"/>
+    <id>https://boiled-yakult.github.io/archives/3af72432.html</id>
+    <published>2022-07-10T02:48:14.000Z</published>
+    <updated>2022-07-10T02:48:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="什么是Rainmeter"><a href="#什么是Rainmeter" class="headerlink" title="什么是Rainmeter"></a>什么是Rainmeter</h2><p>&amp;ensp; &amp;ensp; <a href="https://tieba.baidu.com/p/6729434390#">基本内容和常见问题贴</a><br>&amp;ensp; &amp;ensp; 简单的说，Rainmeter是一款可以让您在桌面上放置类似 “Windows 7桌面小工具”一样的组件的桌面美化软件。不过，相比于数量少、功能单一，已被微软放弃维护的Windows 7桌面小工具，Rainmeter的可玩性极高。<br>&amp;ensp; &amp;ensp; Rainmeter能做什么？它的全部功能，就是布置装饰桌面的组件，这一个个的组件在Rainmeter中被称为“皮肤”。不过这些皮肤能做什么呢？除了单纯的装饰的皮肤外，有的可以调用显示系统信息，有的可以打开或者控制其它应用程序，有的可以展示系统目录结构和信息，有的可以捕获网页的信息……<br>&amp;ensp; &amp;ensp; Rainmeter不能做什么？Rainmeter只能在现有系统外观基础上加以修饰，而不能更改。因此Rainmeter不能改变系统的主题，不能改变开始菜单样式，不能改变任务栏样式，不能改变开机动画，不能额外增加受它控制应用的功能等等。因此如果有类似这样的需求，您还需要其他软件帮助。</p><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p><img src="http://tiebapic.baidu.com/forum/w%3D580/sign=12f37c46802bd40742c7d3f54b889e9c/e5983434349b033b40621eb402ce36d3d439bd2c.jpg?tbpicau=2022-07-11-05_120774e11337f7d87f4a7ab45ef37472"><br>&amp;ensp; &amp;ensp; Rainmeter是一款开源软件。其官网可以获取到最新的Rainmeter软件。您可以根据自己偏好选择正式版（Final Release）或者测试版（Beta Release）。</p><h3 id="资源文件"><a href="#资源文件" class="headerlink" title="资源文件"></a>资源文件</h3><p>链接：<a href="https://pan.baidu.com/s/1EXJt7GEOlgcbcNaR9EowOQ?pwd=6g2n">https://pan.baidu.com/s/1EXJt7GEOlgcbcNaR9EowOQ?pwd=6g2n</a><br>提取码：6g2n</p><h3 id="桌面预览"><a href="#桌面预览" class="headerlink" title="桌面预览"></a>桌面预览</h3><p><img src="https://cdn.jsdelivr.net/gh/Boiled-Yakult/picgoIMG/img/20220710130753.png"></p>]]></content>
+    
+    
+    <summary type="html">下雨天鼓捣鼓捣桌面</summary>
+    
+    
+    
+    <category term="随机日记" scheme="https://boiled-yakult.github.io/categories/%E9%9A%8F%E6%9C%BA%E6%97%A5%E8%AE%B0/"/>
+    
+    
+    <category term="桌面美化" scheme="https://boiled-yakult.github.io/tags/%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96/"/>
+    
+    <category term="好物推荐" scheme="https://boiled-yakult.github.io/tags/%E5%A5%BD%E7%89%A9%E6%8E%A8%E8%8D%90/"/>
+    
+  </entry>
   
   <entry>
     <title>SEO优化以及站点收录</title>
