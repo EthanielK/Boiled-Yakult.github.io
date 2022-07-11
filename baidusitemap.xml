@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://boiled-yakult.github.io/archives/5a8507d2.html</loc>
+    <lastmod>2022-07-11</lastmod>
+  </url>
+  <url>
     <loc>https://boiled-yakult.github.io/archives/8cf30b70.html</loc>
     <lastmod>2022-07-11</lastmod>
   </url>
@@ -59,9 +63,5 @@
   <url>
     <loc>https://boiled-yakult.github.io/archives/d6e2db9e.html</loc>
     <lastmod>2022-05-11</lastmod>
-  </url>
-  <url>
-    <loc>https://boiled-yakult.github.io/archives/5a8507d2.html</loc>
-    <lastmod>2022-04-21</lastmod>
   </url>
 </urlset> 
