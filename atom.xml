@@ -3,11 +3,11 @@
   <title>Boilde Yakult</title>
   
   <subtitle>水煮养乐多</subtitle>
-  <link href="https://boiled-yakult.github.io/atom.xml" rel="self"/>
+  <link href="https://boiledyakult.top/atom.xml" rel="self"/>
   
-  <link href="https://boiled-yakult.github.io/"/>
+  <link href="https://boiledyakult.top/"/>
   <updated>2022-07-10T02:48:14.000Z</updated>
-  <id>https://boiled-yakult.github.io/</id>
+  <id>https://boiledyakult.top/</id>
   
   <author>
     <name>水煮养乐多</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Rainmeter桌面</title>
-    <link href="https://boiled-yakult.github.io/archives/3af72432.html"/>
-    <id>https://boiled-yakult.github.io/archives/3af72432.html</id>
+    <link href="https://boiledyakult.top/archives/3af72432.html"/>
+    <id>https://boiledyakult.top/archives/3af72432.html</id>
     <published>2022-07-10T02:48:14.000Z</published>
     <updated>2022-07-10T02:48:14.000Z</updated>
     
@@ -30,19 +30,19 @@
     
     
     
-    <category term="随机日记" scheme="https://boiled-yakult.github.io/categories/%E9%9A%8F%E6%9C%BA%E6%97%A5%E8%AE%B0/"/>
+    <category term="随机日记" scheme="https://boiledyakult.top/categories/%E9%9A%8F%E6%9C%BA%E6%97%A5%E8%AE%B0/"/>
     
     
-    <category term="桌面美化" scheme="https://boiled-yakult.github.io/tags/%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96/"/>
+    <category term="桌面美化" scheme="https://boiledyakult.top/tags/%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96/"/>
     
-    <category term="好物推荐" scheme="https://boiled-yakult.github.io/tags/%E5%A5%BD%E7%89%A9%E6%8E%A8%E8%8D%90/"/>
+    <category term="好物推荐" scheme="https://boiledyakult.top/tags/%E5%A5%BD%E7%89%A9%E6%8E%A8%E8%8D%90/"/>
     
   </entry>
   
   <entry>
     <title>SEO优化以及站点收录</title>
-    <link href="https://boiled-yakult.github.io/archives/60822be1.html"/>
-    <id>https://boiled-yakult.github.io/archives/60822be1.html</id>
+    <link href="https://boiledyakult.top/archives/60822be1.html"/>
+    <id>https://boiledyakult.top/archives/60822be1.html</id>
     <published>2022-06-29T13:15:40.000Z</published>
     <updated>2022-06-29T13:15:40.000Z</updated>
     
@@ -53,17 +53,17 @@
     
     
     
-    <category term="HEXO" scheme="https://boiled-yakult.github.io/categories/HEXO/"/>
+    <category term="HEXO" scheme="https://boiledyakult.top/categories/HEXO/"/>
     
     
-    <category term="Hexo设置" scheme="https://boiled-yakult.github.io/tags/Hexo%E8%AE%BE%E7%BD%AE/"/>
+    <category term="Hexo设置" scheme="https://boiledyakult.top/tags/Hexo%E8%AE%BE%E7%BD%AE/"/>
     
   </entry>
   
   <entry>
     <title>C#入门基础知识</title>
-    <link href="https://boiled-yakult.github.io/archives/6ad93d68.html"/>
-    <id>https://boiled-yakult.github.io/archives/6ad93d68.html</id>
+    <link href="https://boiledyakult.top/archives/6ad93d68.html"/>
+    <id>https://boiledyakult.top/archives/6ad93d68.html</id>
     <published>2022-06-25T08:07:24.000Z</published>
     <updated>2022-06-28T12:07:24.000Z</updated>
     
@@ -74,19 +74,19 @@
     
     
     
-    <category term="C#" scheme="https://boiled-yakult.github.io/categories/C/"/>
+    <category term="C#" scheme="https://boiledyakult.top/categories/C/"/>
     
-    <category term="编程语言" scheme="https://boiled-yakult.github.io/categories/C/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    <category term="编程语言" scheme="https://boiledyakult.top/categories/C/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
     
-    <category term="C#" scheme="https://boiled-yakult.github.io/tags/C/"/>
+    <category term="C#" scheme="https://boiledyakult.top/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>嵌入式开发面试</title>
-    <link href="https://boiled-yakult.github.io/archives/14a0773e.html"/>
-    <id>https://boiled-yakult.github.io/archives/14a0773e.html</id>
+    <link href="https://boiledyakult.top/archives/14a0773e.html"/>
+    <id>https://boiledyakult.top/archives/14a0773e.html</id>
     <published>2022-06-14T04:53:51.000Z</published>
     <updated>2022-06-14T04:53:51.000Z</updated>
     
@@ -97,19 +97,19 @@
     
     
     
-    <category term="面试" scheme="https://boiled-yakult.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    <category term="面试" scheme="https://boiledyakult.top/categories/%E9%9D%A2%E8%AF%95/"/>
     
     
-    <category term="C语言基础" scheme="https://boiled-yakult.github.io/tags/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/"/>
+    <category term="C语言基础" scheme="https://boiledyakult.top/tags/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/"/>
     
-    <category term="嵌入式" scheme="https://boiled-yakult.github.io/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    <category term="嵌入式" scheme="https://boiledyakult.top/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>Butterfly字体修改成鸿蒙OS字体</title>
-    <link href="https://boiled-yakult.github.io/archives/5fc85bc.html"/>
-    <id>https://boiled-yakult.github.io/archives/5fc85bc.html</id>
+    <link href="https://boiledyakult.top/archives/5fc85bc.html"/>
+    <id>https://boiledyakult.top/archives/5fc85bc.html</id>
     <published>2022-06-12T05:25:07.000Z</published>
     <updated>2022-06-12T05:25:07.000Z</updated>
     
@@ -120,19 +120,19 @@
     
     
     
-    <category term="主题美化" scheme="https://boiled-yakult.github.io/categories/%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/"/>
+    <category term="主题美化" scheme="https://boiledyakult.top/categories/%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/"/>
     
     
-    <category term="字体修改" scheme="https://boiled-yakult.github.io/tags/%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B9/"/>
+    <category term="字体修改" scheme="https://boiledyakult.top/tags/%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B9/"/>
     
-    <category term="主题配置" scheme="https://boiled-yakult.github.io/tags/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/"/>
+    <category term="主题配置" scheme="https://boiledyakult.top/tags/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/"/>
     
   </entry>
   
   <entry>
     <title>Vscode终端调用GitBush</title>
-    <link href="https://boiled-yakult.github.io/archives/88595fc7.html"/>
-    <id>https://boiled-yakult.github.io/archives/88595fc7.html</id>
+    <link href="https://boiledyakult.top/archives/88595fc7.html"/>
+    <id>https://boiledyakult.top/archives/88595fc7.html</id>
     <published>2022-06-10T06:00:22.000Z</published>
     <updated>2022-06-10T06:00:22.000Z</updated>
     
@@ -143,19 +143,19 @@
     
     
     
-    <category term="VsCode" scheme="https://boiled-yakult.github.io/categories/VsCode/"/>
+    <category term="VsCode" scheme="https://boiledyakult.top/categories/VsCode/"/>
     
     
-    <category term="VsCode" scheme="https://boiled-yakult.github.io/tags/VsCode/"/>
+    <category term="VsCode" scheme="https://boiledyakult.top/tags/VsCode/"/>
     
-    <category term="终端美化" scheme="https://boiled-yakult.github.io/tags/%E7%BB%88%E7%AB%AF%E7%BE%8E%E5%8C%96/"/>
+    <category term="终端美化" scheme="https://boiledyakult.top/tags/%E7%BB%88%E7%AB%AF%E7%BE%8E%E5%8C%96/"/>
     
   </entry>
   
   <entry>
     <title>部署到Vercel</title>
-    <link href="https://boiled-yakult.github.io/archives/b52afdc2.html"/>
-    <id>https://boiled-yakult.github.io/archives/b52afdc2.html</id>
+    <link href="https://boiledyakult.top/archives/b52afdc2.html"/>
+    <id>https://boiledyakult.top/archives/b52afdc2.html</id>
     <published>2022-06-08T07:07:15.000Z</published>
     <updated>2022-07-11T12:21:29.472Z</updated>
     
@@ -169,21 +169,21 @@
     
     
     
-    <category term="服务器部署" scheme="https://boiled-yakult.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2/"/>
+    <category term="服务器部署" scheme="https://boiledyakult.top/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2/"/>
     
-    <category term="Vercel" scheme="https://boiled-yakult.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2/Vercel/"/>
+    <category term="Vercel" scheme="https://boiledyakult.top/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2/Vercel/"/>
     
     
-    <category term="Vercel" scheme="https://boiled-yakult.github.io/tags/Vercel/"/>
+    <category term="Vercel" scheme="https://boiledyakult.top/tags/Vercel/"/>
     
-    <category term="Hexo教程" scheme="https://boiled-yakult.github.io/tags/Hexo%E6%95%99%E7%A8%8B/"/>
+    <category term="Hexo教程" scheme="https://boiledyakult.top/tags/Hexo%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>纯手写论文备份：InsightToolkit</title>
-    <link href="https://boiled-yakult.github.io/archives/20a7c132.html"/>
-    <id>https://boiled-yakult.github.io/archives/20a7c132.html</id>
+    <link href="https://boiledyakult.top/archives/20a7c132.html"/>
+    <id>https://boiledyakult.top/archives/20a7c132.html</id>
     <published>2022-05-11T15:29:24.000Z</published>
     <updated>2022-07-11T12:30:01.233Z</updated>
     
@@ -194,23 +194,23 @@
     
     
     
-    <category term="医学图像分割" scheme="https://boiled-yakult.github.io/categories/%E5%8C%BB%E5%AD%A6%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2/"/>
+    <category term="医学图像分割" scheme="https://boiledyakult.top/categories/%E5%8C%BB%E5%AD%A6%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2/"/>
     
     
-    <category term="毕业论文" scheme="https://boiled-yakult.github.io/tags/%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87/"/>
+    <category term="毕业论文" scheme="https://boiledyakult.top/tags/%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87/"/>
     
-    <category term="医学图像" scheme="https://boiled-yakult.github.io/tags/%E5%8C%BB%E5%AD%A6%E5%9B%BE%E5%83%8F/"/>
+    <category term="医学图像" scheme="https://boiledyakult.top/tags/%E5%8C%BB%E5%AD%A6%E5%9B%BE%E5%83%8F/"/>
     
-    <category term="图像分割" scheme="https://boiled-yakult.github.io/tags/%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2/"/>
+    <category term="图像分割" scheme="https://boiledyakult.top/tags/%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2/"/>
     
-    <category term="综述" scheme="https://boiled-yakult.github.io/tags/%E7%BB%BC%E8%BF%B0/"/>
+    <category term="综述" scheme="https://boiledyakult.top/tags/%E7%BB%BC%E8%BF%B0/"/>
     
   </entry>
   
   <entry>
     <title>Hypertension</title>
-    <link href="https://boiled-yakult.github.io/archives/d6e2db9e.html"/>
-    <id>https://boiled-yakult.github.io/archives/d6e2db9e.html</id>
+    <link href="https://boiledyakult.top/archives/d6e2db9e.html"/>
+    <id>https://boiledyakult.top/archives/d6e2db9e.html</id>
     <published>2022-05-11T12:47:21.000Z</published>
     <updated>2022-05-11T12:47:21.000Z</updated>
     
@@ -221,19 +221,19 @@
     
     
     
-    <category term="随机日记" scheme="https://boiled-yakult.github.io/categories/%E9%9A%8F%E6%9C%BA%E6%97%A5%E8%AE%B0/"/>
+    <category term="随机日记" scheme="https://boiledyakult.top/categories/%E9%9A%8F%E6%9C%BA%E6%97%A5%E8%AE%B0/"/>
     
     
-    <category term="桌面美化" scheme="https://boiled-yakult.github.io/tags/%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96/"/>
+    <category term="桌面美化" scheme="https://boiledyakult.top/tags/%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96/"/>
     
-    <category term="好物推荐" scheme="https://boiled-yakult.github.io/tags/%E5%A5%BD%E7%89%A9%E6%8E%A8%E8%8D%90/"/>
+    <category term="好物推荐" scheme="https://boiledyakult.top/tags/%E5%A5%BD%E7%89%A9%E6%8E%A8%E8%8D%90/"/>
     
   </entry>
   
   <entry>
     <title>CS:GO调机器</title>
-    <link href="https://boiled-yakult.github.io/archives/a99aefff.html"/>
-    <id>https://boiled-yakult.github.io/archives/a99aefff.html</id>
+    <link href="https://boiledyakult.top/archives/a99aefff.html"/>
+    <id>https://boiledyakult.top/archives/a99aefff.html</id>
     <published>2022-04-23T07:25:37.000Z</published>
     <updated>2022-07-11T12:30:29.909Z</updated>
     
@@ -247,17 +247,17 @@
     
     
     
-    <category term="游戏设置" scheme="https://boiled-yakult.github.io/categories/%E6%B8%B8%E6%88%8F%E8%AE%BE%E7%BD%AE/"/>
+    <category term="游戏设置" scheme="https://boiledyakult.top/categories/%E6%B8%B8%E6%88%8F%E8%AE%BE%E7%BD%AE/"/>
     
     
-    <category term="CSGO" scheme="https://boiled-yakult.github.io/tags/CSGO/"/>
+    <category term="CSGO" scheme="https://boiledyakult.top/tags/CSGO/"/>
     
   </entry>
   
   <entry>
     <title>Apex画质设置</title>
-    <link href="https://boiled-yakult.github.io/archives/2bedf69.html"/>
-    <id>https://boiled-yakult.github.io/archives/2bedf69.html</id>
+    <link href="https://boiledyakult.top/archives/2bedf69.html"/>
+    <id>https://boiledyakult.top/archives/2bedf69.html</id>
     <published>2022-04-23T06:52:09.000Z</published>
     <updated>2022-07-11T12:30:18.038Z</updated>
     
@@ -271,17 +271,17 @@
     
     
     
-    <category term="游戏设置" scheme="https://boiled-yakult.github.io/categories/%E6%B8%B8%E6%88%8F%E8%AE%BE%E7%BD%AE/"/>
+    <category term="游戏设置" scheme="https://boiledyakult.top/categories/%E6%B8%B8%E6%88%8F%E8%AE%BE%E7%BD%AE/"/>
     
     
-    <category term="Apex Legends" scheme="https://boiled-yakult.github.io/tags/Apex-Legends/"/>
+    <category term="Apex Legends" scheme="https://boiledyakult.top/tags/Apex-Legends/"/>
     
   </entry>
   
   <entry>
     <title>论文day01-图像分割方法综述</title>
-    <link href="https://boiled-yakult.github.io/archives/5a8507d2.html"/>
-    <id>https://boiled-yakult.github.io/archives/5a8507d2.html</id>
+    <link href="https://boiledyakult.top/archives/5a8507d2.html"/>
+    <id>https://boiledyakult.top/archives/5a8507d2.html</id>
     <published>2022-04-21T13:56:02.000Z</published>
     <updated>2022-07-15T10:59:04.547Z</updated>
     
@@ -292,23 +292,23 @@
     
     
     
-    <category term="医学图像分割" scheme="https://boiled-yakult.github.io/categories/%E5%8C%BB%E5%AD%A6%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2/"/>
+    <category term="医学图像分割" scheme="https://boiledyakult.top/categories/%E5%8C%BB%E5%AD%A6%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2/"/>
     
     
-    <category term="毕业论文" scheme="https://boiled-yakult.github.io/tags/%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87/"/>
+    <category term="毕业论文" scheme="https://boiledyakult.top/tags/%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87/"/>
     
-    <category term="医学图像" scheme="https://boiled-yakult.github.io/tags/%E5%8C%BB%E5%AD%A6%E5%9B%BE%E5%83%8F/"/>
+    <category term="医学图像" scheme="https://boiledyakult.top/tags/%E5%8C%BB%E5%AD%A6%E5%9B%BE%E5%83%8F/"/>
     
-    <category term="图像分割" scheme="https://boiled-yakult.github.io/tags/%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2/"/>
+    <category term="图像分割" scheme="https://boiledyakult.top/tags/%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2/"/>
     
-    <category term="综述" scheme="https://boiled-yakult.github.io/tags/%E7%BB%BC%E8%BF%B0/"/>
+    <category term="综述" scheme="https://boiledyakult.top/tags/%E7%BB%BC%E8%BF%B0/"/>
     
   </entry>
   
   <entry>
     <title>Butterfly自用手册</title>
-    <link href="https://boiled-yakult.github.io/archives/8da2c4c2.html"/>
-    <id>https://boiled-yakult.github.io/archives/8da2c4c2.html</id>
+    <link href="https://boiledyakult.top/archives/8da2c4c2.html"/>
+    <id>https://boiledyakult.top/archives/8da2c4c2.html</id>
     <published>2022-04-15T05:42:29.000Z</published>
     <updated>2022-06-09T05:07:33.000Z</updated>
     
@@ -319,19 +319,19 @@
     
     
     
-    <category term="主题美化" scheme="https://boiled-yakult.github.io/categories/%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/"/>
+    <category term="主题美化" scheme="https://boiledyakult.top/categories/%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/"/>
     
     
-    <category term="主题配置" scheme="https://boiled-yakult.github.io/tags/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/"/>
+    <category term="主题配置" scheme="https://boiledyakult.top/tags/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/"/>
     
-    <category term="hexo" scheme="https://boiled-yakult.github.io/tags/hexo/"/>
+    <category term="hexo" scheme="https://boiledyakult.top/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>使用Github+PicGo搭建个人图床</title>
-    <link href="https://boiled-yakult.github.io/archives/8cf30b70.html"/>
-    <id>https://boiled-yakult.github.io/archives/8cf30b70.html</id>
+    <link href="https://boiledyakult.top/archives/8cf30b70.html"/>
+    <id>https://boiledyakult.top/archives/8cf30b70.html</id>
     <published>2022-04-07T07:59:56.000Z</published>
     <updated>2022-07-11T12:35:14.049Z</updated>
     
@@ -345,19 +345,19 @@
     
     
     
-    <category term="图床搭建" scheme="https://boiled-yakult.github.io/categories/%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/"/>
+    <category term="图床搭建" scheme="https://boiledyakult.top/categories/%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/"/>
     
     
-    <category term="个人图床" scheme="https://boiled-yakult.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%9B%BE%E5%BA%8A/"/>
+    <category term="个人图床" scheme="https://boiledyakult.top/tags/%E4%B8%AA%E4%BA%BA%E5%9B%BE%E5%BA%8A/"/>
     
-    <category term="教程" scheme="https://boiled-yakult.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://boiledyakult.top/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>使用vscode开始Markdown写作之旅</title>
-    <link href="https://boiled-yakult.github.io/archives/62fc2fe9.html"/>
-    <id>https://boiled-yakult.github.io/archives/62fc2fe9.html</id>
+    <link href="https://boiledyakult.top/archives/62fc2fe9.html"/>
+    <id>https://boiledyakult.top/archives/62fc2fe9.html</id>
     <published>2022-04-07T07:23:25.000Z</published>
     <updated>2022-07-11T12:30:19.561Z</updated>
     
@@ -371,19 +371,19 @@
     
     
     
-    <category term="Markdown草稿" scheme="https://boiled-yakult.github.io/categories/Markdown%E8%8D%89%E7%A8%BF/"/>
+    <category term="Markdown草稿" scheme="https://boiledyakult.top/categories/Markdown%E8%8D%89%E7%A8%BF/"/>
     
     
-    <category term="Markdown" scheme="https://boiled-yakult.github.io/tags/Markdown/"/>
+    <category term="Markdown" scheme="https://boiledyakult.top/tags/Markdown/"/>
     
-    <category term="vscode" scheme="https://boiled-yakult.github.io/tags/vscode/"/>
+    <category term="vscode" scheme="https://boiledyakult.top/tags/vscode/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://boiled-yakult.github.io/archives/4a17b156.html"/>
-    <id>https://boiled-yakult.github.io/archives/4a17b156.html</id>
+    <link href="https://boiledyakult.top/archives/4a17b156.html"/>
+    <id>https://boiledyakult.top/archives/4a17b156.html</id>
     <published>2022-03-13T08:26:51.552Z</published>
     <updated>2022-07-11T12:30:11.522Z</updated>
     

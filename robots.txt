@@ -13,5 +13,5 @@ Disallow: /vendors/
 Disallow: /fancybox/
 
 # 记得替换成你的域名
-Sitemap: https://boiled-yakult-github-io.vercel.app/sitemap.xml
-Sitemap: https://boiled-yakult-github-io.vercel.app/baidusitemap.xml
+Sitemap: https://boiledyakult.top/sitemap.xml
+Sitemap: https://boiledyakult.top/baidusitemap.xml
