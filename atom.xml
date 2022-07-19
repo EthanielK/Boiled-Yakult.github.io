@@ -6,7 +6,7 @@
   <link href="https://boiledyakult.top/atom.xml" rel="self"/>
   
   <link href="https://boiledyakult.top/"/>
-  <updated>2022-07-10T02:48:14.000Z</updated>
+  <updated>2022-07-17T11:10:39.000Z</updated>
   <id>https://boiledyakult.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>个人图床含泪优化</title>
+    <link href="https://boiledyakult.top/archives/9c513fe1.html"/>
+    <id>https://boiledyakult.top/archives/9c513fe1.html</id>
+    <published>2022-07-17T11:10:39.000Z</published>
+    <updated>2022-07-17T11:10:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Test</p>]]></content>
+    
+    
+    <summary type="html">仅以此篇文章记录我的个人图传转移阵地的血泪史</summary>
+    
+    
+    
+    <category term="图床搭建" scheme="https://boiledyakult.top/categories/%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/"/>
+    
+    <category term="主题升级" scheme="https://boiledyakult.top/categories/%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/%E4%B8%BB%E9%A2%98%E5%8D%87%E7%BA%A7/"/>
+    
+    
+    <category term="个人图床" scheme="https://boiledyakult.top/tags/%E4%B8%AA%E4%BA%BA%E5%9B%BE%E5%BA%8A/"/>
+    
+    <category term="主题优化" scheme="https://boiledyakult.top/tags/%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/"/>
+    
+  </entry>
   
   <entry>
     <title>Rainmeter桌面</title>
