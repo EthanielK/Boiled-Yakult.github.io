@@ -6,7 +6,7 @@
   <link href="https://boiledyakult.top/atom.xml" rel="self"/>
   
   <link href="https://boiledyakult.top/"/>
-  <updated>2022-07-17T11:10:39.000Z</updated>
+  <updated>2022-07-31T11:02:24.000Z</updated>
   <id>https://boiledyakult.top/</id>
   
   <author>
@@ -17,13 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Twikoo 评论系统</title>
+    <link href="https://boiledyakult.top/archives/6f83f598.html"/>
+    <id>https://boiledyakult.top/archives/6f83f598.html</id>
+    <published>2022-07-31T11:02:24.000Z</published>
+    <updated>2022-07-31T11:02:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note danger simple"><p>文章参考：</p><ul><li><a href="https://twikoo.js.org/">Twikoo官方文档</a></li><li><a href="https://butterfly.js.org/posts/ceeb73f/#%E8%A9%95%E8%AB%96">Butterfly官方配置文档</a></li><li><a href="https://www.nickxu.top/2022/02/19/Hexo-Butterfly-%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97%EF%BC%88%E5%9B%9B%EF%BC%89Twikoo-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/">Hexo + Butterfly 建站指南（四）Twikoo 评论系统</a></li></ul></div><h3 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h3><p>使用<code>MongoDB数据库</code>来存储数据，注册 <code>MongoDB</code> 账号,创建免费数据库，类型选择<code>Shared</code>，区域选择 <code>AWS / N. Virginia (us-east-1)</code><br><img src="https://img1.imgtp.com/2022/07/31/Ho1PvV8O.png"><br><img src="https://img1.imgtp.com/2022/07/31/nM7ANFzR.png"><br><img src="https://img1.imgtp.com/2022/07/31/psNyhwEl.png"><br>点击<code>Connect</code>按钮,  键入 <code>0.0.0.0/0</code> 以允许所有 IP 地址的连接，并创建数据库用户 ,连接方式选择中间的<code>Connect your application</code><br><img src="https://img1.imgtp.com/2022/07/31/dfjaIL6b.png"><br>复制文中字符串，使用过程中需要将字符串中的<code>password</code>修改为刚才的密码。<br>#Vercle</p><ul><li>注册账号</li><li>点击<a href="https://vercel.com/new/clone?repository-url=https://github.com/imaegoo/twikoo/tree/dev/src/vercel-min">此链接</a>将项目代码部署到你的代码托管网站上去，一般直接选<code>GitHub</code>,新建存储库。<br><img src="https://img1.imgtp.com/2022/07/31/FSPfOK0y.png"></li><li>完成后，在导航栏选择<code>Setting</code>，在左侧选择<code>Environment Variables</code>，添加变量<code>MONGODB_URI</code>，值输入刚才的连接字符串，记得修改<code>&lt;password&gt;</code>为数据库用户密码<br><img src="https://img1.imgtp.com/2022/07/31/vrDAdb8j.png"><br>因为Vercel没办法从将Twikoo导入到github仓库，等过几天再尝试。</li></ul><h3 id="改用腾讯云函数配置"><a href="#改用腾讯云函数配置" class="headerlink" title="改用腾讯云函数配置"></a>改用腾讯云函数配置</h3><ul><li>参阅官方文档<a href="https://twikoo.js.org/quick-start.html#%E6%89%8B%E5%8A%A8%E9%83%A8%E7%BD%B2">手动部署</a><br>按照教程进行即可配置完全，不再赘述</li><li>环境id在云开发主页可找到</li><li><img src="https://img1.imgtp.com/2022/07/31/KdOkhnxm.png"></li><li>复制环境id，修改butterfly_config.yml文件相关内容即可</li><li><img src="https://img1.imgtp.com/2022/07/31/jMXjw6PO.png"></li><li><img src="https://img1.imgtp.com/2022/07/31/r3oxfZxI.png"></li></ul>]]></content>
+    
+    
+    <summary type="html">评论系统更改</summary>
+    
+    
+    
+    <category term="主题美化" scheme="https://boiledyakult.top/categories/%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/"/>
+    
+    
+    <category term="主题配置" scheme="https://boiledyakult.top/tags/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>个人图床含泪优化</title>
     <link href="https://boiledyakult.top/archives/9c513fe1.html"/>
     <id>https://boiledyakult.top/archives/9c513fe1.html</id>
     <published>2022-07-17T11:10:39.000Z</published>
     <updated>2022-07-17T11:10:39.000Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>###写在开头<br>本篇仅作为个人图传服务器迁移备份的吐槽篇，此外别无他用。想查看图床搭建过程，可以参阅<a href="https://boiledyakult.top/archives/8cf30b70.html">使用Github+PicGo搭建个人图床</a>额，大抵是这样了。<br>###图床更换历程<br>Github+PicGO  &amp;rArr;  国内不挂梯子无法正常加载图片&amp;rArr;七牛云免费存储空间&amp;rArr;七牛云存储空间需要个人域名，因此才注册了自己域名地址&amp;rArr;博客服务器在海外，国内无法备案，而七牛云需要有自己的备案域名&amp;rArr;七牛云提供的一个月默认域名由于域名污染实际访问过程中也无法加载&amp;rArr;尝试国内其他的图床服务：路过图床（加载速度较慢）、免费图床网（偶然点了进去发现可以通过配置PicGO上传图片，除了上传速度略慢一点，但是网站正常显示加载很给力）<br>###关于七牛云<br>关于更换图床地址的想法一直有的，但是因为确实没有目标明确的更换方案，而且更改图传的工程量较大，因为工作的原因，迟迟没有实操。偶然间在Bilili就看有位UP主将Gitee存储的图片转移到七牛云，所以也就试了试。更改过程极为难受，大致流程为将原服务器上的文件下载到本地&amp;rArr;将图片上传到目标服务器上&amp;rArr;然后挨个修改博客中用到的图片地址【我是这样弄得，因为vscode的替换我不知道为什么不能批量替换】&amp;rArr;大概持续了一周多（因为域名注册用了好几天的时间）&amp;rArr;换好链接发现没有备案的域名没办法在七牛云绑定&amp;rArr;寄了<br>###免费图床网<br>大概很长一阵子没有维护过博客，因为看到加载不出来的图片着实难受，，，，。逛知乎看到路过图传的推荐，才知道国内也是有提供免费图床存储的，于是开始尝试各类的免费图传，我发现他们大部分界面风格都是差不多的，嘿嘿😅。因为之前一直用PicGO上传图片，用习惯了，所以对于不能使用PicGo的图传我是直接排在第二梯队的，而且每次都需要打开网站上传也太费劲了。不知道怎么点到免费图床网的，好像是因为路过图传上传速度太慢了，远不如之前PicGo上传Github。后面看设置有<code>token</code>，嘿嘿。<br>然后又是换链接，七万五千里长征······<br>用了大概半个多月了，图片加载在我看来还是可以的，虽然首次访问还不能做到秒加载吗，不过也可以了，哈哈哈。<br>至此，图床告一段落。</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="写在开头"><a href="#写在开头" class="headerlink" title="写在开头"></a>写在开头</h3><p>本篇仅作为个人图传服务器迁移备份的吐槽篇，此外别无他用。想查看图床搭建过程，可以参阅<a href="https://boiledyakult.top/archives/8cf30b70.html">使用Github+PicGo搭建个人图床</a>。额，大抵是这样了。</p><h3 id="图床更换历程"><a href="#图床更换历程" class="headerlink" title="图床更换历程"></a>图床更换历程</h3><p>Github+PicGO  &amp;rArr;  国内不挂梯子无法正常加载图片&amp;rArr;七牛云免费存储空间&amp;rArr;七牛云存储空间需要个人域名，因此才注册了自己域名地址&amp;rArr;博客服务器在海外，国内无法备案，而七牛云需要有自己的备案域名&amp;rArr;七牛云提供的一个月默认域名由于域名污染实际访问过程中也无法加载&amp;rArr;尝试国内其他的图床服务：路过图床（加载速度较慢）、免费图床网（偶然点了进去发现可以通过配置PicGO上传图片，除了上传速度略慢一点，但是网站正常显示加载很给力）</p><h3 id="关于七牛云"><a href="#关于七牛云" class="headerlink" title="关于七牛云"></a>关于七牛云</h3><p>关于更换图床地址的想法一直有的，但是因为确实没有目标明确的更换方案，而且更改图传的工程量较大，因为工作的原因，迟迟没有实操。偶然间在Bilili就看有位UP主将Gitee存储的图片转移到七牛云，所以也就试了试。更改过程极为难受，大致流程为将原服务器上的文件下载到本地&amp;rArr;将图片上传到目标服务器上&amp;rArr;然后挨个修改博客中用到的图片地址【我是这样弄得，因为vscode的替换我不知道为什么不能批量替换】&amp;rArr;大概持续了一周多（因为域名注册用了好几天的时间）&amp;rArr;换好链接发现没有备案的域名没办法在七牛云绑定&amp;rArr;寄了</p><h3 id="免费图床网"><a href="#免费图床网" class="headerlink" title="免费图床网"></a><a href="https://www.imgtp.com/">免费图床网</a></h3><p>大概很长一阵子没有维护过博客，因为看到加载不出来的图片着实难受，，，，。逛知乎看到路过图传的推荐，才知道国内也是有提供免费图床存储的，于是开始尝试各类的免费图传，我发现他们大部分界面风格都是差不多的，嘿嘿😅。因为之前一直用PicGO上传图片，用习惯了，所以对于不能使用PicGo的图传我是直接排在第二梯队的，而且每次都需要打开网站上传也太费劲了。不知道怎么点到免费图床网的，好像是因为路过图传上传速度太慢了，远不如之前PicGo上传Github。后面看设置有<code>token</code>，嘿嘿。<br>然后又是换链接，七万五千里长征······<br>用了大概半个多月了，图片加载在我看来还是可以的，虽然首次访问还不能做到秒加载吗，不过也可以了，哈哈哈。<br>至此，图床告一段落。</p>]]></content>
     
     
     <summary type="html">仅以此篇文章记录我的个人图传转移阵地的血泪史</summary>
@@ -71,7 +92,7 @@
     <published>2022-06-29T13:15:40.000Z</published>
     <updated>2022-06-29T13:15:40.000Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>文章参考</p><ul><li><a href="https://www.cnblogs.com/LzsCxb/p/16352073.html#hexo-filter-nofollow-%E6%8F%92%E4%BB%B6">Github+Hexo个人博客搭建：SEO 优化及站点被搜索引擎收录设置</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>博客网站的各大搜索引擎（百度、必应、谷歌）推送已基本完成，因为之前的笔记本没带这，所以过阵子更新教程。</p>]]></content>
     
     
     <summary type="html">这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要</summary>
@@ -273,33 +294,6 @@
     
     
     <category term="Apex Legends" scheme="https://boiledyakult.top/tags/Apex-Legends/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>论文day01-图像分割方法综述</title>
-    <link href="https://boiledyakult.top/archives/5a8507d2.html"/>
-    <id>https://boiledyakult.top/archives/5a8507d2.html</id>
-    <published>2022-04-21T13:56:02.000Z</published>
-    <updated>2022-07-20T11:05:42.330Z</updated>
-    
-    <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <script id="hbeData" type="hbeData" data-hmacdigest="b2601ea1021c637a023454b41afefcabdd33360cf8dcd329e9249101d5d4b4bf">f3fcaaf1cb1e28774e11b3986ddd77fdab18caa12b407e24e1be6726430e53b138ddf33e6993895b58be1e3d2e9fd4997dec0289b4eb1a363661786a4dd3be60b404124e937aef7b2e923ee4289a88d67eb047575347c50f14647607fc02da7144cdef646e4ae8ca63ad3814bf1346e7843278cfa7a07599613669a576eeee694454686a128d0f001aaa8717355f65033b71730931824576f69dbee46258304db800741c55ec125610ccccbdd8a348cf043677aff1ad099d86f819aab98c218011dccbf902a672a49faa3701394d9cde43a09d46341ecc82ac0f3e42747bcde3b03e6ca968d2b94954847eb2271e7d0e697f79d3cefed35e7d632cf89fe9518c32f4600b9db8a729ebfc0f73ec851aa887f745704fa91ead37bd58ec59c367e75f255a03fc4d0655f2fe57ffda67f8010c6ec9263399ab048e908ac71bbb559fb369531759b74fb162ab4b45f3a7e7816cc2bccc92dc833b50ffbe52f21bdc11bda583505e5d573b42878d63fb6738e5a1387212466f05dd08385f410c5a3b3059b067194c8b34fc8f58268ac8ff6885a82648377680a24368009bac44d5cf710d3d181d20b43fc1e9d5102e29b241d703cd7a442331a6dab3a84178729dd32069eabe48ab2ad71082fb3f726a9040ec672728131c472c5265d3885bcac2bd3f</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-    
-    
-    <summary type="html">Here&#39;s something encrypted, password is required to continue reading.</summary>
-    
-    
-    
-    <category term="医学图像分割" scheme="https://boiledyakult.top/categories/%E5%8C%BB%E5%AD%A6%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2/"/>
-    
-    
-    <category term="毕业论文" scheme="https://boiledyakult.top/tags/%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87/"/>
-    
-    <category term="医学图像" scheme="https://boiledyakult.top/tags/%E5%8C%BB%E5%AD%A6%E5%9B%BE%E5%83%8F/"/>
-    
-    <category term="图像分割" scheme="https://boiledyakult.top/tags/%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2/"/>
-    
-    <category term="综述" scheme="https://boiledyakult.top/tags/%E7%BB%BC%E8%BF%B0/"/>
     
   </entry>
   
