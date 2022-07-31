@@ -23,7 +23,7 @@
     <published>2022-07-17T11:10:39.000Z</published>
     <updated>2022-07-17T11:10:39.000Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Test</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>###写在开头<br>本篇仅作为个人图传服务器迁移备份的吐槽篇，此外别无他用。想查看图床搭建过程，可以参阅<a href="https://boiledyakult.top/archives/8cf30b70.html">使用Github+PicGo搭建个人图床</a>额，大抵是这样了。<br>###图床更换历程<br>Github+PicGO  &amp;rArr;  国内不挂梯子无法正常加载图片&amp;rArr;七牛云免费存储空间&amp;rArr;七牛云存储空间需要个人域名，因此才注册了自己域名地址&amp;rArr;博客服务器在海外，国内无法备案，而七牛云需要有自己的备案域名&amp;rArr;七牛云提供的一个月默认域名由于域名污染实际访问过程中也无法加载&amp;rArr;尝试国内其他的图床服务：路过图床（加载速度较慢）、免费图床网（偶然点了进去发现可以通过配置PicGO上传图片，除了上传速度略慢一点，但是网站正常显示加载很给力）<br>###关于七牛云<br>关于更换图床地址的想法一直有的，但是因为确实没有目标明确的更换方案，而且更改图传的工程量较大，因为工作的原因，迟迟没有实操。偶然间在Bilili就看有位UP主将Gitee存储的图片转移到七牛云，所以也就试了试。更改过程极为难受，大致流程为将原服务器上的文件下载到本地&amp;rArr;将图片上传到目标服务器上&amp;rArr;然后挨个修改博客中用到的图片地址【我是这样弄得，因为vscode的替换我不知道为什么不能批量替换】&amp;rArr;大概持续了一周多（因为域名注册用了好几天的时间）&amp;rArr;换好链接发现没有备案的域名没办法在七牛云绑定&amp;rArr;寄了<br>###免费图床网<br>大概很长一阵子没有维护过博客，因为看到加载不出来的图片着实难受，，，，。逛知乎看到路过图传的推荐，才知道国内也是有提供免费图床存储的，于是开始尝试各类的免费图传，我发现他们大部分界面风格都是差不多的，嘿嘿😅。因为之前一直用PicGO上传图片，用习惯了，所以对于不能使用PicGo的图传我是直接排在第二梯队的，而且每次都需要打开网站上传也太费劲了。不知道怎么点到免费图床网的，好像是因为路过图传上传速度太慢了，远不如之前PicGo上传Github。后面看设置有<code>token</code>，嘿嘿。<br>然后又是换链接，七万五千里长征······<br>用了大概半个多月了，图片加载在我看来还是可以的，虽然首次访问还不能做到秒加载吗，不过也可以了，哈哈哈。<br>至此，图床告一段落。</p>]]></content>
     
     
     <summary type="html">仅以此篇文章记录我的个人图传转移阵地的血泪史</summary>
