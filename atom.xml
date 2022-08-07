@@ -6,7 +6,7 @@
   <link href="https://boiledyakult.top/atom.xml" rel="self"/>
   
   <link href="https://boiledyakult.top/"/>
-  <updated>2022-07-31T11:02:24.000Z</updated>
+  <updated>2022-08-07T09:36:54.000Z</updated>
   <id>https://boiledyakult.top/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>评论系统更改：Valine配置教程</title>
+    <link href="https://boiledyakult.top/archives/2ad55243.html"/>
+    <id>https://boiledyakult.top/archives/2ad55243.html</id>
+    <published>2022-08-07T09:36:54.000Z</published>
+    <updated>2022-08-07T09:36:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="写在开头"><a href="#写在开头" class="headerlink" title="写在开头"></a>写在开头</h3><p>前不久才将评论从livere换到Twikoo就收到了腾讯云函数收费的通知😵，尝试换用MangoDB+Vercel一直失败，我又没有私人服务器，只能换其他的评论系统了。<br><img src="https://img1.imgtp.com/2022/08/07/bzjbcAUd.png"></p><h3 id="关于Valine"><a href="#关于Valine" class="headerlink" title="关于Valine"></a>关于Valine</h3><p><code>Valine </code>诞生于2017年8月7日，是一款基于<code>LeanCloud</code>的快速、简洁且高效的无后端评论系统。</p><ul><li>官网：<a href="https://valine.js.org/">https://valine.js.org/</a></li><li>Github: <a href="https://github.com/xCss/Valine">https://github.com/xCss/Valine</a></li></ul><h3 id="接入Hexo—-获取APP-ID-和-APP-Key"><a href="#接入Hexo—-获取APP-ID-和-APP-Key" class="headerlink" title="接入Hexo—-获取APP ID 和 APP Key"></a>接入Hexo—-获取<code>APP ID</code> 和 <code>APP Key</code></h3><p>请<a href="https://leancloud.cn/dashboard/login.html#/signin">登录</a>或者<a href="https://leancloud.cn/dashboard/login.html#/signup">注册</a><code>LeanCloud</code>，进入控制台创建应用：<br><img src="https://img1.imgtp.com/2022/08/07/ONgzfvTg.png">你们的页面可能跟我的有出入，因为之前创建的时候，没有验证邮箱。。。。。。创建成功可以直接看到我们创建的应用，点击小齿轮：<br><img src="https://img1.imgtp.com/2022/08/07/Gf9knlei.png"><br>进入设置，基于可以获得需要的<code>APP ID</code> 和 <code>APP Key</code>了。<br><img src="https://img1.imgtp.com/2022/08/07/gO3AU8pX.png"></p><h3 id="修改-config-butterfly-yml文件"><a href="#修改-config-butterfly-yml文件" class="headerlink" title="修改_config.butterfly.yml文件"></a>修改<code>_config.butterfly.yml</code>文件</h3><p><img src="https://img1.imgtp.com/2022/08/07/phEl60Qu.png"><br>然后修改<code>comment</code>值，更多的配置项，请查阅：<a href="https://valine.js.org/configuration.html">配置项 | Valine 一款快速、简洁且高效的无后端评论系统</a>。</p>]]></content>
+    
+    
+    <summary type="html">配置Valine评论</summary>
+    
+    
+    
+    <category term="主题美化" scheme="https://boiledyakult.top/categories/%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/"/>
+    
+    
+    <category term="主题配置" scheme="https://boiledyakult.top/tags/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>Twikoo 评论系统</title>
