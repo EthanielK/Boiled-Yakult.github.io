@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>C#WinForm应用之timer定时器</title>
+      <link href="/archives/221c258.html"/>
+      <url>/archives/221c258.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="写在开头"><a href="#写在开头" class="headerlink" title="写在开头"></a>写在开头</h3><blockquote><p>C#Winform窗体应用timer定时器开发记录。</p></blockquote><h3 id="timer事件函数"><a href="#timer事件函数" class="headerlink" title="timer事件函数"></a>timer事件函数</h3><p>timer控件默认是关闭的，我们在点击按钮是开始timer事件</p><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义全局变量用来接收计时变量以及停止时间</span></span><br><span class="line"><span class="built_in">int</span> count , time;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  ...</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">timer1_Tick</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">  count++;<span class="comment">//记录当前秒</span></span><br><span class="line">  progressBar1.Value = count;<span class="comment">//设置进度条进度</span></span><br><span class="line">  label3.Text = (timer -count).Tostring() + <span class="string">&quot;秒&quot;</span> ;<span class="comment">//动态显示计时</span></span><br><span class="line">  <span class="keyword">if</span>(count == time)</span><br><span class="line">  &#123;</span><br><span class="line">    timer1.Stop();</span><br><span class="line">    MessageBox.Show(<span class="string">&quot;时间到了！&quot;</span>,<span class="string">&quot;提示&quot;</span>);<span class="comment">//弹窗提示</span></span><br><span class="line">    Sysetem.Media.SystemSounds.Asterisk.Play();<span class="comment">//系统提示音</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Button1_click</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">string</span> str = comBox1.Text;</span><br><span class="line">  progressBar1.Maximum = time ;<span class="comment">//进度条最大值</span></span><br><span class="line">  time = Convert.toInt32(str.Substring(<span class="number">0</span>,<span class="number">2</span>)) ;</span><br><span class="line">  timer1.start();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>参考串口关闭<br>涉及到的控件、需要注意的东西</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程语言 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> Winform </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>评论系统更改：Valine配置教程</title>
       <link href="/archives/2ad55243.html"/>
       <url>/archives/2ad55243.html</url>
@@ -147,8 +174,6 @@
       
       
       <categories>
-          
-          <category> C# </category>
           
           <category> 编程语言 </category>
           
