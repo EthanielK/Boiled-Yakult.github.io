@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>C#关于XML文件读写部分内容</title>
+      <link href="/archives/undefined.html"/>
+      <url>/archives/undefined.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//XML节点中增加数据</span></span><br><span class="line">elem1_1.InnerText =<span class="string">&quot;80&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//随机数</span></span><br><span class="line">Random r = <span class="keyword">new</span> Random();</span><br><span class="line"></span><br><span class="line"><span class="comment">//读取XML文档</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ReadXml</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    XmlDocument xDoc =<span class="keyword">new</span> XmlDocument();</span><br><span class="line">    xDoc.Load(<span class="string">&quot;Student.xml&quot;</span>);</span><br><span class="line">    <span class="comment">//获取根节点</span></span><br><span class="line">    xmlNode node = xDoc.SelectSingleNode(<span class="string">&quot;students&quot;</span>);</span><br><span class="line">    xmlNodeList nodelist = node.ChildNodes;</span><br><span class="line">    <span class="keyword">foreach</span>(XmlNode xn <span class="keyword">in</span> nodelist)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//强制类型转换</span></span><br><span class="line">        XmlElement xmle =(XmlElement xn);</span><br><span class="line">        <span class="built_in">string</span> name = xn.name;</span><br><span class="line">        <span class="built_in">string</span> name =xn.GetAttribute(<span class="string">&quot;姓名&quot;</span>);</span><br><span class="line">        XmlNodeList childList =xn.ChildNodes;</span><br><span class="line">        <span class="keyword">foreach</span>(XmlNode n <span class="keyword">in</span> childList)</span><br><span class="line">        &#123;</span><br><span class="line">            XmlElement xe=(XmlElement n);</span><br><span class="line">            <span class="built_in">string</span> className=xe.Name;<span class="comment">//成绩</span></span><br><span class="line">            <span class="built_in">string</span> score =xe.InnerText;<span class="comment">//获取或设置</span></span><br><span class="line">            <span class="comment">//修改属性值</span></span><br><span class="line">            xe.InnerText=<span class="string">&quot;100&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        xDoc.Save(<span class="string">&quot;Student.xml&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> XML文件 </tag>
+            
+            <tag> 笔记便签 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C#WinForm应用之timer定时器</title>
       <link href="/archives/221c258.html"/>
       <url>/archives/221c258.html</url>
