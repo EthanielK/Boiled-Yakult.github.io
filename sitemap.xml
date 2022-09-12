@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://boiledyakult.top/archives/bf624ee1.html</loc>
+    
+    <lastmod>2022-09-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://boiledyakult.top/archives/abc2fd82.html</loc>
     
     <lastmod>2022-09-12</lastmod>
@@ -423,6 +432,13 @@
   
   <url>
     <loc>https://boiledyakult.top/tags/%E6%B3%A2%E5%BD%A2%E6%98%BE%E7%A4%BA/</loc>
+    <lastmod>2022-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://boiledyakult.top/tags/SQL-Server/</loc>
     <lastmod>2022-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
