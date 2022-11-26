@@ -396,13 +396,6 @@
   </url>
   
   <url>
-    <loc>https://boiledyakult.top/tags/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2022-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://boiledyakult.top/tags/Markdown/</loc>
     <lastmod>2022-11-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -411,6 +404,13 @@
   
   <url>
     <loc>https://boiledyakult.top/tags/vscode/</loc>
+    <lastmod>2022-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://boiledyakult.top/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2022-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -517,6 +517,13 @@
   </url>
   
   <url>
+    <loc>https://boiledyakult.top/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2/</loc>
+    <lastmod>2022-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://boiledyakult.top/categories/HEXO/SEO%E4%BC%98%E5%8C%96/</loc>
     <lastmod>2022-11-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -525,13 +532,6 @@
   
   <url>
     <loc>https://boiledyakult.top/categories/%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/%E4%B8%BB%E9%A2%98%E5%8D%87%E7%BA%A7/</loc>
-    <lastmod>2022-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://boiledyakult.top/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2/</loc>
     <lastmod>2022-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
