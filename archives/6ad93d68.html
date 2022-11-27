@@ -1,0 +1,408 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>C#入门基础知识 | Boilde Yakult</title><meta name="keywords" content="C#"><meta name="author" content="水煮养乐多"><meta name="copyright" content="水煮养乐多"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="如题，对博主学习C#编程语言做个笔记，因为大学期间学习过C#，本篇只做简单记录。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C#入门基础知识">
+<meta property="og:url" content="https://boiledyakult.top/archives/6ad93d68.html">
+<meta property="og:site_name" content="Boilde Yakult">
+<meta property="og:description" content="如题，对博主学习C#编程语言做个笔记，因为大学期间学习过C#，本篇只做简单记录。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img1.imgtp.com/2022/07/20/2PPZQA53.png">
+<meta property="article:published_time" content="2022-06-25T08:07:24.000Z">
+<meta property="article:modified_time" content="2022-06-28T12:07:24.000Z">
+<meta property="article:author" content="水煮养乐多">
+<meta property="article:tag" content="C#">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img1.imgtp.com/2022/07/20/2PPZQA53.png"><link rel="shortcut icon" href="https://img1.imgtp.com/2022/07/19/MDJ9ga1z.png"><link rel="canonical" href="https://boiledyakult.top/archives/6ad93d68"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="gKxpZfSwjekZmuNg5EL9Fb7mVW6WoSiUsI6dmdxyNEA"/><meta name="baidu-site-verification" content="code-IfvY8a3L5Y"/><meta name="msvalidate.01" content="1D98F4C0BA61871A8D6002E81C848D55"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?75f008b0af91a843c9456b2d2aba3254";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":60,"position":"top","messagePrev":"该文章发布或更新于","messageNext":"天前，请以最新文章为主，本文仅提供参考"},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'C#入门基础知识',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-06-28 20:07:24'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/self.css"><link rel="stylesheet" href="/css/icon.css" media="defer" onload="this.media='all"><link rel="stylesheet" href="//at.alicdn.com/t/font_3265059_92p6yi903w4.css"><link rel="stylesheet" href="//at.alicdn.com/t/c/font_3793946_5eeyyoh7sel.css"><link rel="stylesheet" href="//at.alicdn.com/t/c/font_3793960_9k8tsyypvgq.css"><script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><script async src="/js/weather.js"></script><link rel="stylesheet" href="/css/font.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css" /><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="Boilde Yakult" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://s3.uuu.ovh/imgs/2022/11/26/c5b19ce3f79f9754.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">14</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw iconfont icon-zixun"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw iconfont icon-shaixuan"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw iconfont icon-chakansousuo"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw iconfont icon-cunchu"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw iconfont icon-zanping"></i><span> sweet time</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/books/"><i class="fa-fw iconfont icon-yudu"></i><span> 书单</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw iconfont icon-shipin"></i><span> 电影</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw iconfont icon-youxi"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/%E9%9B%86%E9%82%AE%E5%86%8C/"><i class="fa-fw iconfont icon-tupian"></i><span> 集邮册</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw iconfont icon-a-wo"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw iconfont icon-dangan"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://img1.imgtp.com/2022/07/20/2PPZQA53.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Boilde Yakult</a><div id="he-plugin-simple"></div></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw iconfont icon-zixun"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw iconfont icon-shaixuan"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw iconfont icon-chakansousuo"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw iconfont icon-cunchu"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw iconfont icon-zanping"></i><span> sweet time</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/books/"><i class="fa-fw iconfont icon-yudu"></i><span> 书单</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw iconfont icon-shipin"></i><span> 电影</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw iconfont icon-youxi"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/%E9%9B%86%E9%82%AE%E5%86%8C/"><i class="fa-fw iconfont icon-tupian"></i><span> 集邮册</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw iconfont icon-a-wo"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw iconfont icon-dangan"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">C#入门基础知识</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-06-25T08:07:24.000Z" title="发表于 2022-06-25 16:07:24">2022-06-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-06-28T12:07:24.000Z" title="更新于 2022-06-28 20:07:24">2022-06-28</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>5分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="C#入门基础知识"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>如题，对博主学习C#编程语言做个笔记，因为大学期间学习过C#，本篇只做简单记录。</p>
+<h1 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h1><p>vs2017</p>
+<h1 id="计算机结构"><a href="#计算机结构" class="headerlink" title="计算机结构"></a>计算机结构</h1><p>可以简单理解为</p>
+<ul>
+<li>输入设备</li>
+<li>控制器：控制程序执行</li>
+<li>运算器</li>
+<li>存储器</li>
+<li>输出设备<br><img src="http://reuvza1fi.hb-bkt.clouddn.com/img/20220625221359.png"></li>
+</ul>
+<h1 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h1><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">Examples</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] args</span>)<span class="comment">//程序开始执行的地方</span></span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">string</span> inputStr = <span class="literal">null</span>;<span class="comment">//定义变量并赋值，告诉计算机分配多大的存储空间</span></span><br><span class="line">            inputStr = Console.ReadLine();<span class="comment">//ReadLine()读取数据</span></span><br><span class="line">            <span class="built_in">string</span> outputStr = <span class="string">&quot;Hi,&quot;</span> + inputStr;</span><br><span class="line">            Console.WriteLine(outputStr);</span><br><span class="line">            Console.ReadKey();<span class="comment">//让DOS窗口接收一个字符才会退出。</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="关键字、命名规则"><a href="#关键字、命名规则" class="headerlink" title="关键字、命名规则"></a>关键字、命名规则</h1><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/keywords/">C#关键字</a><br>命名规则：</p>
+<ul>
+<li>不能使用关键字</li>
+<li>开头第一个字母只能是字母或者_，后面可以跟数字、字母、_，不能出现空格、运算符、标点符号等</li>
+<li>区分大小写</li>
+<li>不能与关键字相同<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.jianshu.com/p/dc26cb8ffcb9">具体命名规范</a></li>
+</ul>
+<h1 id="存储单位"><a href="#存储单位" class="headerlink" title="存储单位"></a>存储单位</h1><ul>
+<li>1 Bit（位）表示0或1 （对应计算机硬件的基础存储单位）</li>
+<li>1 Byte（字节）&#x3D;8 Bit （2^8&#x3D;256）</li>
+<li>1 B &#x3D;8 b</li>
+<li>1024 &#x3D; 2^10</li>
+<li>1KB（Kilobyte,千字节）&#x3D;1024B</li>
+<li>1MB(Megabyte,兆字节)&#x3D;1024KB</li>
+<li>1GB（Gigabyte，吉字节，千兆）&#x3D;1024MB</li>
+<li>1TB（Trillionbyte，万亿字节，太字节）&#x3D;1024GB</li>
+</ul>
+<h2 id="各类型变量字节大小"><a href="#各类型变量字节大小" class="headerlink" title="各类型变量字节大小"></a>各类型变量字节大小</h2><ul>
+<li><code>int</code> 4字节（Byte）32位 有符号整数，可以定义为负数 -2147483648到2147483647</li>
+<li><code>uint</code> 4字节 0-4294967295 0和整数，不能表示负数</li>
+<li><code>float</code> 4字节</li>
+<li><code>double</code> 8字节</li>
+<li><code>bool</code> 由编译器决定</li>
+<li>其他 <code>sbyte,short,long,ushort,ulong</code> <code>8，16，64，64</code></li>
+<li><code>char</code> 2字节 ‘a’，’急’；<code>char valChar = &#39;z&#39; ;</code></li>
+<li><code>string</code> 由多个char组成，<code>string valString = &quot;要吃就莱。&quot;;</code><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">    <span class="built_in">string</span> valStr = <span class="string">&quot;Hello,BoiledYakult&quot;</span>;</span><br><span class="line"><span class="comment">//                   0123456789...下标从0开始</span></span><br><span class="line">    <span class="built_in">int</span> length = valStr.Length;<span class="comment">//字符串长度lengeh=18</span></span><br><span class="line">    <span class="built_in">int</span> index = valStr.IndexOf(<span class="string">&quot;Boiled&quot;</span>);<span class="comment">//查找字符串中第一个匹配项的从零开始的索引,index=6</span></span><br><span class="line">    <span class="built_in">string</span> strResult = valStr.Replace(<span class="string">&quot;hello&quot;</span>, <span class="string">&quot;Preditor&quot;</span>);<span class="comment">//替换字符串</span></span><br><span class="line">    <span class="built_in">string</span> subStr = valStr.Substring(<span class="number">7</span>, <span class="number">2</span>);<span class="comment">//截取BoiledYakult</span></span><br></pre></td></tr></table></figure></li>
+<li><code>M[]</code>数组，存储多个M类型数据，eg：<code>int[] ary=new int[10];</code><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ary[<span class="number">0</span>]=<span class="number">3</span>;</span><br><span class="line"><span class="built_in">int</span> intVal=ary[<span class="number">3</span>];</span><br><span class="line"><span class="comment">//长度ary.Length</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">double</span> valDoule = <span class="number">6.28</span>;</span><br><span class="line"><span class="built_in">float</span> valFloat = (<span class="built_in">float</span>)valDoule;<span class="comment">//显式类型转换【高精度转换为低精度-强制类型转换】</span></span><br><span class="line"><span class="built_in">double</span> valDouble2 = valFloat;<span class="comment">//隐式类型转换</span></span><br><span class="line"><span class="built_in">int</span> valInt = (<span class="built_in">int</span>)valFloat;<span class="comment">//valInt=6</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//数值类型和string类型转换</span></span><br><span class="line"><span class="built_in">string</span> valStr2 = <span class="string">&quot;5&quot;</span>;</span><br><span class="line"><span class="built_in">int</span> valInt2 = <span class="built_in">int</span>.Parse(valStr2);</span><br><span class="line"><span class="built_in">long</span> valLong = <span class="built_in">long</span>.Parse(valStr2);</span><br><span class="line"><span class="built_in">string</span> valStr3 = valLong.ToString();</span><br><span class="line">Console.WriteLine(subStr);</span><br></pre></td></tr></table></figure>
+<h1 id="自增-amp-amp-字符串格式化"><a href="#自增-amp-amp-字符串格式化" class="headerlink" title="自增&amp;&amp;字符串格式化"></a>自增&amp;&amp;字符串格式化</h1><ul>
+<li>自增自减<ul>
+<li>++i &#x2F;&#x2F; i&#x3D;i+1;return i;</li>
+<li>i++ &#x2F;&#x2F; int r&#x3D;1; i&#x3D;i+1; return r;<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> valInt = <span class="number">4</span>;</span><br><span class="line"><span class="built_in">int</span> postInt = valInt++;<span class="comment">// postInt = 4; valInt = 5;</span></span><br><span class="line">valInt = <span class="number">4</span>;</span><br><span class="line"><span class="built_in">int</span> perInt = ++valInt;<span class="comment">// PostInt =5;valInt = 5;</span></span><br><span class="line"></span><br><span class="line">valInt = <span class="number">4</span>;</span><br><span class="line"><span class="built_in">int</span> postDec = valInt--;<span class="comment">// postDec = 4; valInt = 3;</span></span><br><span class="line">valInt = <span class="number">4</span>;</span><br><span class="line"><span class="built_in">int</span> perDec = --valInt;<span class="comment">// PostInt =3;valInt = 3;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>+&#x3D; -&#x3D;<ul>
+<li>a +&#x3D; b; &#x3D;&#x3D; a &#x3D; a+b;</li>
+<li>a -&#x3D; b; &#x3D;&#x3D; a &#x3D; a-b;</li>
+</ul>
+</li>
+<li>字符串内插$”info &#x3D; {a}”<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> result =<span class="number">3</span>;</span><br><span class="line"><span class="built_in">string</span> inputStr = <span class="string">&quot;val&quot;</span>;</span><br><span class="line"><span class="built_in">string</span> str1 = intputStr+ <span class="string">&quot;的计算结果为：&quot;</span> + result;</span><br><span class="line"><span class="built_in">string</span> str2 = <span class="string">$&quot;<span class="subst">&#123;inputStr&#125;</span>的计算结果为：<span class="subst">&#123;result&#125;</span>&quot;</span>;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><ul>
+<li>返回值类型 函数名（参数列表）{任意条指令；return 返回值；}<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PrintHelloworld</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">  Console.Write(<span class="string">&quot;HelloWorld!&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PrintValue</span>(<span class="params"><span class="built_in">string</span> val</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">  Console.Write(val);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="built_in">float</span> <span class="title">MulAdd</span>(<span class="params"><span class="built_in">float</span> val1,<span class="built_in">float</span> val2,<span class="built_in">float</span> addNum</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">return</span> val1*val2+addNum;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">float</span> mul1 = <span class="number">3</span>;</span><br><span class="line"><span class="built_in">float</span> mul2 = <span class="number">100.5f</span>;</span><br><span class="line"><span class="built_in">float</span> add1= <span class="number">32</span>;</span><br><span class="line"><span class="built_in">float</span> result = MulAdd(mul1,mul2,add1);</span><br><span class="line">PrintValue(<span class="string">&quot;Result: &quot;</span>);</span><br></pre></td></tr></table></figure>
+<img src="https://img1.imgtp.com/2022/07/20/F01poCqX.png"></li>
+<li>减少重复代码</li>
+<li>封装实现细节</li>
+</ul>
+<h1 id="简单案例"><a href="#简单案例" class="headerlink" title="简单案例"></a>简单案例</h1><ul>
+<li>加法计算器：从控制台输入你想计算的公式3+5.要求中间不能有空格<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Console.WriteLine(<span class="string">&quot;请输入加法算术题，按回车结束&quot;</span>);</span><br><span class="line"><span class="comment">//52+468</span></span><br><span class="line"><span class="comment">//012345</span></span><br><span class="line"><span class="built_in">string</span> inputStr = Console.ReadLine();</span><br><span class="line"><span class="built_in">int</span> plusIdx = inputStr.IndexOf(<span class="string">&quot;+&quot;</span>);<span class="comment">//查找加号运算符位置</span></span><br><span class="line"><span class="built_in">string</span> numStr1 = inputStr.Substring(<span class="number">0</span>, plusIdx);<span class="comment">//截取从位置0到加号运算符之间的第一个加数</span></span><br><span class="line"><span class="built_in">int</span> strLen = inputStr.Count();<span class="comment">//计算输入字符串的长度</span></span><br><span class="line"><span class="built_in">string</span> numStr2 = inputStr.Substring(plusIdx + <span class="number">1</span>, strLen - plusIdx - <span class="number">1</span>);<span class="comment">//截取加号运算符后面的被加数</span></span><br><span class="line"><span class="built_in">float</span> num1 = <span class="built_in">float</span>.Parse(numStr1);<span class="comment">//强制类型转换，将获取的加数和被加数字符串转换成浮点类型</span></span><br><span class="line"><span class="built_in">float</span> num2 = <span class="built_in">float</span>.Parse(numStr2);</span><br><span class="line"><span class="built_in">float</span> sum = num1 + num2;</span><br><span class="line">Console.WriteLine(inputStr + <span class="string">&quot; = &quot;</span> + sum);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h1 id="Bool-比较"><a href="#Bool-比较" class="headerlink" title="Bool 比较"></a>Bool 比较</h1><p><code>&lt; &gt; &lt;= &gt;= == !=</code></p>
+<h1 id="Bool-组合"><a href="#Bool-组合" class="headerlink" title="Bool 组合"></a>Bool 组合</h1><ul>
+<li>非<ul>
+<li>！对一个值取反，<code>!true==false</code> <code>!!false=false</code></li>
+</ul>
+</li>
+<li>且<ul>
+<li><code>a &amp;&amp; b</code> 仅在两边都为true时返回值为true</li>
+</ul>
+</li>
+<li>或<ul>
+<li><code>a || b</code>有一个true就返回true，都为false时返回false</li>
+</ul>
+</li>
+</ul>
+<h1 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h1><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">tring title = <span class="string">&quot;&quot;</span>;</span><br><span class="line"><span class="built_in">string</span> gender = Console.ReadLine();</span><br><span class="line"><span class="keyword">if</span> (gender==<span class="string">&quot;男&quot;</span>)</span><br><span class="line">&#123;</span><br><span class="line">  title = <span class="string">&quot;帅哥&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">  itle = <span class="string">&quot;女&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line">Console.WriteLine(<span class="string">$&quot;这位<span class="subst">&#123;title&#125;</span>,要吃就莱！&quot;</span>);</span><br><span class="line"><span class="comment">//$ 特殊字符将字符串文本标识为内插字符串 。 </span></span><br><span class="line"><span class="comment">//内插字符串是可能包含内插表达式的字符串文本 。 </span></span><br><span class="line"><span class="comment">//将内插字符串解析为结果字符串时，带有内插表达式的项会替换为表达式结果的字符串表示形式。</span></span><br><span class="line"><span class="comment">// 从 C# 6 开始可以使exit用此功能。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//字符串内插为格式化字符串提供了一种可读性和便捷性更高的方式。 它比字符串复合格式设置更容易阅读。 </span></span><br></pre></td></tr></table></figure></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined" rel="external nofollow noreferrer">水煮养乐多</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://boiledyakult.top/archives/6ad93d68.html">https://boiledyakult.top/archives/6ad93d68.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://boiledyakult.top" target="_blank">Boilde Yakult</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/C/">C#</a></div><div class="post_share"><div class="social-share" data-image="https://img1.imgtp.com/2022/07/20/2PPZQA53.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/archives/60822be1.html"><img class="prev-cover" src="https://s1.ax1x.com/2022/07/17/jIQbIP.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">SEO优化以及站点收录</div></div></a></div><div class="next-post pull-right"><a href="/archives/14a0773e.html"><img class="next-cover" src="https://img1.imgtp.com/2022/07/20/Z8NRXAAA.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">嵌入式开发面试</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/archives/abc2fd82.html" title="C#-XML文件读写"><img class="cover" src="https://cdn0.iconfinder.com/data/icons/flat-file-format/100/xml-512.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-12</div><div class="title">C#-XML文件读写</div></div></a></div><div><a href="/archives/221c258.html" title="C#WinForm应用之timer定时器"><img class="cover" src="https://s.imgkb.xyz/abcdocker/2022/08/21/021cffe132dab/021cffe132dab.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-08-21</div><div class="title">C#WinForm应用之timer定时器</div></div></a></div><div><a href="/archives/bf624ee1.html" title="C#与SQL Server数据库"><img class="cover" src="https://s.imgkb.xyz/abcdocker/2022/09/12/3c241a25f8814/3c241a25f8814.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-12</div><div class="title">C#与SQL Server数据库</div></div></a></div><div><a href="/archives/ecd4b633.html" title="Echarts图表速记"><img class="cover" src="https://s.imgkb.xyz/abcdocker/2022/09/06/104dbe3fe996a/104dbe3fe996a.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-06</div><div class="title">Echarts图表速记</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://s3.uuu.ovh/imgs/2022/11/26/c5b19ce3f79f9754.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">水煮养乐多</div><div class="author-info__description">十四亿分之一 很高兴认识你🥂🥂</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">14</div></a></div></div><a id="card-info-btn" href="https://boiledyakult.top"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Boiled-Yakult/Boiled-Yakult.github.io.git" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="iconfont icon-github"></i></a><a class="social-icon" href="Gmail:lk1981640629@gmail.com" rel="external nofollow noreferrer" target="_blank" title=""><i class="iconfont icon-gmail"></i></a><a class="social-icon" href="https://s3.uuu.ovh/imgs/2022/11/26/c53beafc7696f2d3.png" rel="external nofollow noreferrer" target="_blank" title="QQ"><i class="iconfont icon-qq"></i></a><a class="social-icon" href="https://space.bilibili.com/384210387?spm_id_from=333.1007.0.0" rel="external nofollow noreferrer" target="_blank" title="bilibili"><i class="iconfont icon-bilibili"></i></a><a class="social-icon" href="https://www.zhihu.com/people/jing-nian-wei-bie/answers" rel="external nofollow noreferrer" target="_blank" title="Zhihu"><i class="iconfont icon-shejiaotubiao-10"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">“虚惊一场”<br>这四个字是人世间最好的成语，比起什么兴高采烈，五彩缤纷，一帆风顺都要美好百倍。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-number">2.</span> <span class="toc-text">开发环境</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%93%E6%9E%84"><span class="toc-number">3.</span> <span class="toc-text">计算机结构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hello-World"><span class="toc-number">4.</span> <span class="toc-text">Hello World</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E5%AD%97%E3%80%81%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99"><span class="toc-number">5.</span> <span class="toc-text">关键字、命名规则</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E5%8D%95%E4%BD%8D"><span class="toc-number">6.</span> <span class="toc-text">存储单位</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%84%E7%B1%BB%E5%9E%8B%E5%8F%98%E9%87%8F%E5%AD%97%E8%8A%82%E5%A4%A7%E5%B0%8F"><span class="toc-number">6.1.</span> <span class="toc-text">各类型变量字节大小</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">6.2.</span> <span class="toc-text">类型转换</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%87%AA%E5%A2%9E-amp-amp-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="toc-number">7.</span> <span class="toc-text">自增&amp;&amp;字符串格式化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-number">8.</span> <span class="toc-text">函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E6%A1%88%E4%BE%8B"><span class="toc-number">9.</span> <span class="toc-text">简单案例</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Bool-%E6%AF%94%E8%BE%83"><span class="toc-number">10.</span> <span class="toc-text">Bool 比较</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Bool-%E7%BB%84%E5%90%88"><span class="toc-number">11.</span> <span class="toc-text">Bool 组合</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5"><span class="toc-number">12.</span> <span class="toc-text">条件语句</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/archives/bf624ee1.html" title="C#与SQL Server数据库"><img src="https://s.imgkb.xyz/abcdocker/2022/09/12/3c241a25f8814/3c241a25f8814.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C#与SQL Server数据库"/></a><div class="content"><a class="title" href="/archives/bf624ee1.html" title="C#与SQL Server数据库">C#与SQL Server数据库</a><time datetime="2022-09-12T11:10:14.000Z" title="发表于 2022-09-12 19:10:14">2022-09-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/abc2fd82.html" title="C#-XML文件读写"><img src="https://cdn0.iconfinder.com/data/icons/flat-file-format/100/xml-512.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C#-XML文件读写"/></a><div class="content"><a class="title" href="/archives/abc2fd82.html" title="C#-XML文件读写">C#-XML文件读写</a><time datetime="2022-09-12T09:28:59.000Z" title="发表于 2022-09-12 17:28:59">2022-09-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/ecd4b633.html" title="Echarts图表速记"><img src="https://s.imgkb.xyz/abcdocker/2022/09/06/104dbe3fe996a/104dbe3fe996a.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Echarts图表速记"/></a><div class="content"><a class="title" href="/archives/ecd4b633.html" title="Echarts图表速记">Echarts图表速记</a><time datetime="2022-09-06T13:16:27.000Z" title="发表于 2022-09-06 21:16:27">2022-09-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/221c258.html" title="C#WinForm应用之timer定时器"><img src="https://s.imgkb.xyz/abcdocker/2022/08/21/021cffe132dab/021cffe132dab.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C#WinForm应用之timer定时器"/></a><div class="content"><a class="title" href="/archives/221c258.html" title="C#WinForm应用之timer定时器">C#WinForm应用之timer定时器</a><time datetime="2022-08-21T12:27:03.000Z" title="发表于 2022-08-21 20:27:03">2022-08-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/2ad55243.html" title="评论系统更改：Valine配置教程"><img src="https://pic1.imgdb.cn/item/635fbb0016f2c2beb1dc2b75.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="评论系统更改：Valine配置教程"/></a><div class="content"><a class="title" href="/archives/2ad55243.html" title="评论系统更改：Valine配置教程">评论系统更改：Valine配置教程</a><time datetime="2022-08-07T09:36:54.000Z" title="发表于 2022-08-07 17:36:54">2022-08-07</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 水煮养乐多</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener external nofollow noreferrer" href="https://boiled-yakult.github.io/">blog</a>🥂!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (true){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'utQsfr5Ugfm9NYlLy3patqDs-gzGzoHsz',
+      appKey: 't7puMXzez1pbE7VJIqxigG0X',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script src="/js/self.js"></script><script src="https://myhkw.cn/player/js/jquery.min.js" type="text/javascript"></script><script src="https://myhkw.cn/api/player/164786043754" id="myhk" key="164786043754" m="1"></script><script async src="//at.alicdn.com/t/c/font_3793946_5eeyyoh7sel.js"></script><script async src="//at.alicdn.com/t/c/font_3793960_9k8tsyypvgq.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_clock_anzhiyu_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
+    console.log('已挂载butterfly_clock_anzhiyu')
+    if(parent_div_git) {
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var qweather_key = 'c6cc3bbe6c184d8c868c3c32e74c18f8';
+  var gaud_map_key = 'db6a97a20b2bbdf59401a9f347d09e11';
+  var baidu_ak_key = 'undefined';
+  var flag = 0;
+  var clock_rectangle = '112.982279,28.19409';
+  var clock_default_rectangle_enable = 'false';
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  </script><script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><script data-pjax src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.js"></script><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;archives/9c513fe1.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt=""><img width="48" height="48" src="https://pic1.imgdb.cn/item/635fb9fb16f2c2beb1d97380.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-07-17</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;archives/9c513fe1.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="">个人图床含泪优化</a><div class="blog-slider__text">仅以此篇文章记录我的个人图传转移阵地的血泪史</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;archives/9c513fe1.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;archives/60822be1.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt=""><img width="48" height="48" src="https://s1.ax1x.com/2022/07/17/jIQbIP.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-06-29</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;archives/60822be1.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="">SEO优化以及站点收录</a><div class="blog-slider__text">咧，本篇记录一下收集整理关于博客被百度、谷歌等搜索引擎收录的过程，至于一些Hexo的知识操作，请自己百度，主要涉及sitemap自动提交和npm安装。SEO(search engine optimization)，搜索引擎优化，是一种通过了解搜索引擎的运作规则来调整网站，以及提高目的网站在有关搜索引擎内排名的方式。</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;archives/60822be1.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;archives/8cf30b70.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt=""><img width="48" height="48" src="https://s1.ax1x.com/2022/10/31/xTE5RO.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-04-07</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;archives/8cf30b70.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="">使用Github+PicGo搭建个人图床</a><div class="blog-slider__text">又是没写Description的一天😵</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;archives/8cf30b70.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;archives/ecd4b633.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt=""><img width="48" height="48" src="https://s.imgkb.xyz/abcdocker/2022/09/06/104dbe3fe996a/104dbe3fe996a.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-09-06</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;archives/ecd4b633.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="">Echarts图表速记</a><div class="blog-slider__text">这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;archives/ecd4b633.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;archives/bf624ee1.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt=""><img width="48" height="48" src="https://s.imgkb.xyz/abcdocker/2022/09/12/3c241a25f8814/3c241a25f8814.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-09-12</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;archives/bf624ee1.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="">C#与SQL Server数据库</a><div class="blog-slider__text">这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;archives/bf624ee1.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;archives/abc2fd82.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt=""><img width="48" height="48" src="https://cdn0.iconfinder.com/data/icons/flat-file-format/100/xml-512.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-09-12</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;archives/abc2fd82.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="">C#-XML文件读写</a><div class="blog-slider__text">这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;archives/abc2fd82.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;archives/5fc85bc.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt=""><img width="48" height="48" src="https://pic1.imgdb.cn/item/635fb99b16f2c2beb1d88314.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-06-12</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;archives/5fc85bc.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="">Butterfly字体修改成鸿蒙OS字体</a><div class="blog-slider__text">修改butterfly默认字体为HarmonyOS_Sans字体</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;archives/5fc85bc.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="">详情       </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><!-- hexo injector body_end end --></body></html>
