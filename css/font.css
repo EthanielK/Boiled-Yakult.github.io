@@ -1,8 +1,0 @@
-@font-face{
-    font-family: 'HarmonyOS_Sans_Regular';
-    font-display: swap;
-    src: url('../font/HarmonyOS_Sans_Regular.ttf') format("truetype"); 
-}
-body {
-    font-family: 'HarmonyOS_Sans_Regular';
-}
