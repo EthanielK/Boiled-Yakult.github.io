@@ -4,11 +4,36 @@
   
     
     <entry>
+      <title>Winform程序制作安装包</title>
+      <link href="/archives/a76b87d6.html"/>
+      <url>/archives/a76b87d6.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote><p>记录一下Winform程序打包过程<br>参考文章：<a href="https://www.cnblogs.com/GuZhenYin/p/8176981.html" title="VS2017 WinFrom打包设置与教程">VS2017 WinFrom打包设置与教程</a></p></blockquote><h1 id="下载-Visual-Studio-Installer-拓展插件"><a href="#下载-Visual-Studio-Installer-拓展插件" class="headerlink" title="下载 Visual Studio Installer 拓展插件"></a>下载 Visual Studio Installer 拓展插件</h1><p>&amp;#160; &amp;#160; &amp;#160; &amp;#160;从VS2017开始VS已默认不再集成Installer拓展，所以需要手动下载安装，在 <strong>工具 - 插件和更新</strong> 里面的插件商店里面搜索”<strong>installer</strong>“安装。<br><img src="https://img2023.cnblogs.com/blog/2913706/202302/2913706-20230201164335955-1158786909.png" alt="image"></p><h1 id="制作打包文件"><a href="#制作打包文件" class="headerlink" title="制作打包文件"></a>制作打包文件</h1><ol><li>右键 Winform程序所在的解决方案 - 添加 - 新建项目</li><li>找到 <strong>Setup Project</strong> 创建项目<ul><li>新建的Setup Project的项目名称就是打包完成以后安装程序的名称</li></ul></li><li>添加入口文件（主输出）：右键 Application Folder - Add - 项目输出<ul><li>主输出就是解决方案中的启动项目，也就是<code>Main()</code>方法<br> <img src="https://img2023.cnblogs.com/blog/2913706/202302/2913706-20230201165851734-1050381890.png" alt="image"></li></ul></li><li>添加快捷方式图标文件：右键 Application Folder - Add - 文件 - 找到图标文件添加即可<br> <img src="https://img2023.cnblogs.com/blog/2913706/202302/2913706-20230201170257868-1893411778.png" alt="image"></li><li>创建快捷方式：右键 主输出 - Create Shortcut to …（创建快捷方式）<br> <img src="https://img2023.cnblogs.com/blog/2913706/202302/2913706-20230201170437549-449438386.png" alt="image"></li><li>自定义快捷方式属性：右键 生成的快捷方式 - 属性窗口<br> <img src="https://img2023.cnblogs.com/blog/2913706/202302/2913706-20230201170707532-1504948246.png" alt="image"><ul><li>将刚才创建并配置好的快捷方式拖入 <strong>User’s Desktop</strong> 文件夹，即可在程序安装时自动生成桌面快捷方式；</li><li>重复以上步骤再创建一个快捷方式，拖入到 <strong>User’s Programs Menu</strong> 文件里面即可在程序安装时自动在开始菜单中添加快捷方式；<br><img src="https://img2023.cnblogs.com/blog/2913706/202302/2913706-20230201171220534-764098646.png" alt="image"></li></ul></li><li>设置程序需要的 <strong>.Net</strong> 版本：右键 安装项目 - 属性 - Prerequisites<br><img src="https://img2023.cnblogs.com/blog/2913706/202302/2913706-20230201171538759-875966091.png" alt="image"></li><li>手动添加其他资源文件<ul><li>我这里没有用到其他文件资源，如果程序用到了其他配置资源，右键 Application Folder - Add - 文件 ，手动添加就可以了。</li></ul></li><li>右键 - 安装项目 - 生成 就可以生成安装程序了。<br><img src="https://img2023.cnblogs.com/blog/2913706/202302/2913706-20230201172500272-114949923.png" alt="image"></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Winform </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 安装包制作 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C# 判断IP地址是否正确</title>
       <link href="/archives/1b9b23f2.html"/>
       <url>/archives/1b9b23f2.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote><p>参考文章：<a href="https://www.cnblogs.com/chendaoyin/p/3568881.html" title="C# 判断ip地址是否正确">C# 判断ip地址是否正确</a></p></blockquote><p>楼主提供的方法是通过<code>IPAddress.TryParse(String, IPAddress)</code>来判断字符串是否为有效地址，如果能解析IP地址，则为<code>true</code>。这个方法也蛮巧妙的，判断IP地址我第一反应是根据<code>&#39;.&#39;</code>分割字符串然后每个字符挨个判断，手动写格式判断啥的，效率低还麻烦，容易出错，看到楼主那个还挺好玩的，就试了一下。发现了一些问题：</p><details><summary>IPAddress.TryParse()方法</summary><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">string ipStr = &quot;10.1&quot;;</span><br><span class="line">System.Net.IPAddress ip;</span><br><span class="line">if (System.Net.IPAddress.TryParse(ipStr,out ip))</span><br><span class="line">&#123;</span><br><span class="line">    MessageBox.Show(&quot;IP地址合法&quot;);</span><br><span class="line">&#125;</span><br><span class="line">else</span><br><span class="line">&#123;</span><br><span class="line">    MessageBox.Show(&quot;IP地址不合法&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></details><p>这个方法没办法对输入的IP的格式进行判断，测试字符串是<strong>10.1</strong>在测试过程中是可以成功转换的，但是显然输入的IP不是有效地址。可以转换成功的原因是<code>IPAddress.TryParse()</code>方法接受有效的<code>String</code>值，可以分析为一个<code>Int64</code>值，然后将这个值作为IP地址的长值，这就意味着只要接受到的字符串可以成功解析成一个<code>Int64</code>值就会返回<code>True</code>，即使它表示的不是有效的IP地址。<br>微软技术文档在说明该方法时提供了以下注解：</p><blockquote><p>例如，如果 ipString 为“1”，则此方法返回 true，即使“1” (或 0.0.0.1) 不是有效的 IP 地址，你可能期望此方法返回 false。 修复此 bug 会中断现有应用，因此不会更改当前行为。 代码可以通过确保仅使用此方法分析采用点十进制格式的 IP 地址来避免此行为。</p></blockquote><p>楼主评论区中有人提出可以用正则表达式来判断，既能判断格式也能判断数值，一举两得。</p><details><summary>正则表达式</summary><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">System.Text.RegularExpressions.Regex rx = new System.Text.RegularExpressions.Regex(@&quot;\b((?:(?:25[0-5]|2[0-4]\d|((1\d&#123;2&#125;)|([1-9]?\d)))\.)&#123;3&#125;(?:25[0-5]|2[0-4]\d|((1\d&#123;2&#125;)|([1-9]?\d))))\b&quot;);</span><br><span class="line">string ipStr = &quot;10.1&quot;;</span><br><span class="line">if (rx.IsMatch(ipStr) == false)</span><br><span class="line">&#123;</span><br><span class="line">MessageBox.Show(&quot;IP地址不合法&quot;);</span><br><span class="line">return;</span><br><span class="line">&#125;</span><br><span class="line">else</span><br><span class="line">&#123;</span><br><span class="line">MessageBox.Show(&quot;IP地址合法&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></details>Perfect！]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote><p>参考文章：<a href="https://www.cnblogs.com/chendaoyin/p/3568881.html" title="C# 判断ip地址是否正确">C# 判断ip地址是否正确</a></p></blockquote><p>楼主提供的方法是通过<code>IPAddress.TryParse(String, IPAddress)</code>来判断字符串是否为有效地址，如果能解析IP地址，则为<code>true</code>。这个方法也蛮巧妙的，判断IP地址我第一反应是根据<code>&#39;.&#39;</code>分割字符串然后每个字符挨个判断，手动写格式判断啥的，效率低还麻烦，容易出错，看到楼主那个还挺好玩的，就试了一下。发现了一些问题：</p><details><summary>IPAddress.TryParse()方法</summary><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">string ipStr = &quot;10.1&quot;;</span><br><span class="line">System.Net.IPAddress ip;</span><br><span class="line">if (System.Net.IPAddress.TryParse(ipStr,out ip))</span><br><span class="line">&#123;</span><br><span class="line">    MessageBox.Show(&quot;IP地址合法&quot;);</span><br><span class="line">&#125;</span><br><span class="line">else</span><br><span class="line">&#123;</span><br><span class="line">    MessageBox.Show(&quot;IP地址不合法&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></details><br><p>这个方法没办法对输入的IP的格式进行判断，测试字符串是<strong>10.1</strong>在测试过程中是可以成功转换的，但是显然输入的IP不是有效地址。可以转换成功的原因是<code>IPAddress.TryParse()</code>方法接受有效的<code>String</code>值，可以分析为一个<code>Int64</code>值，然后将这个值作为IP地址的长值，这就意味着只要接受到的字符串可以成功解析成一个<code>Int64</code>值就会返回<code>True</code>，即使它表示的不是有效的IP地址。<br>微软技术文档在说明该方法时提供了以下注解：</p><blockquote><p>例如，如果 ipString 为“1”，则此方法返回 true，即使“1” (或 0.0.0.1) 不是有效的 IP 地址，你可能期望此方法返回 false。 修复此 bug 会中断现有应用，因此不会更改当前行为。 代码可以通过确保仅使用此方法分析采用点十进制格式的 IP 地址来避免此行为。</p></blockquote><p>楼主评论区中有人提出可以用正则表达式来判断，既能判断格式也能判断数值，一举两得。</p><details><summary>正则表达式</summary><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">System.Text.RegularExpressions.Regex rx = new System.Text.RegularExpressions.Regex(@&quot;\b((?:(?:25[0-5]|2[0-4]\d|((1\d&#123;2&#125;)|([1-9]?\d)))\.)&#123;3&#125;(?:25[0-5]|2[0-4]\d|((1\d&#123;2&#125;)|([1-9]?\d))))\b&quot;);</span><br><span class="line">string ipStr = &quot;10.1&quot;;</span><br><span class="line">if (rx.IsMatch(ipStr) == false)</span><br><span class="line">&#123;</span><br><span class="line">MessageBox.Show(&quot;IP地址不合法&quot;);</span><br><span class="line">return;</span><br><span class="line">&#125;</span><br><span class="line">else</span><br><span class="line">&#123;</span><br><span class="line">MessageBox.Show(&quot;IP地址合法&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></details><br>Perfect！]]></content>
       
       
       <categories>
@@ -23,19 +48,6 @@
             <tag> C#实用小技巧 </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/archives/4a17b156.html"/>
-      <url>/archives/4a17b156.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
-      
       
     </entry>
     
@@ -453,35 +465,6 @@
             <tag> VsCode </tag>
             
             <tag> 终端美化 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>部署到Vercel</title>
-      <link href="/archives/b52afdc2.html"/>
-      <url>/archives/b52afdc2.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="写在开头"><a href="#写在开头" class="headerlink" title="写在开头"></a>写在开头</h2><p><a href="https://vercel.com/dashboard">Vercel</a>，和 GitHub Pages 一样，也是用来托管你的博客的，但是它在国内的网络状况要比 GitHub Pages 好。<br></p><ul><li>首先点击-Login登录：<br><img src="https://img1.imgtp.com/2022/07/20/4za8TCFI.png"></li><li>之后回弹出如下内容，使用Github账户授权登录即可：<br><img src="https://img1.imgtp.com/2022/07/20/Q7Wxp3U7.png"></li><li>选择导入Git仓库:Imporrt Git Repository，添加Github账户：<br><img src="https://img1.imgtp.com/2022/07/20/czC9XzyY.png"></li><li>添加以后会显示最近更新的仓库内容，找到博客所在的仓库导入，如果没有就搜索一下仓库名字：</li><li><img src="https://img1.imgtp.com/2022/07/20/x3cfixwh.png"></li><li>忘记在哪一步有安装了，好像是导入之前或者是之后，紧接着安装就行，会进行一次GitHub验证，验证完成之后直接导入，只要仓库没选错，一直下一步就行了，操作结束之后GitHub账户绑定的邮箱会收到一封关于Vercel提供的托管以后的博客地址。<br><img src="https://img1.imgtp.com/2022/07/20/hMrE13fY.png"></li><li>每次新内容推送后都会收到一封内容更新的邮件提醒。</li><li>现在在想，jsdelivr加速效果失效以后，我现在图床用着jsdelivr的cdn加速，加载的时候是快了，还是慢了呢。</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> 服务器部署 </category>
-          
-          <category> Vercel </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Vercel </tag>
-            
-            <tag> Hexo教程 </tag>
             
         </tags>
       
