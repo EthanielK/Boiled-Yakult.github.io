@@ -6,7 +6,7 @@
   <link href="https://boiledyakult.top/atom.xml" rel="self"/>
   
   <link href="https://boiledyakult.top/"/>
-  <updated>2023-02-21T12:58:33.226Z</updated>
+  <updated>2023-02-26T04:23:54.000Z</updated>
   <id>https://boiledyakult.top/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C# 判断IP地址是否正确</title>
+    <link href="https://boiledyakult.top/archives/1b9b23f2.html"/>
+    <id>https://boiledyakult.top/archives/1b9b23f2.html</id>
+    <published>2023-02-26T04:23:54.000Z</published>
+    <updated>2023-02-26T04:23:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote><p>参考文章：<a href="https://www.cnblogs.com/chendaoyin/p/3568881.html" title="C# 判断ip地址是否正确">C# 判断ip地址是否正确</a></p></blockquote><p>楼主提供的方法是通过<code>IPAddress.TryParse(String, IPAddress)</code>来判断字符串是否为有效地址，如果能解析IP地址，则为<code>true</code>。这个方法也蛮巧妙的，判断IP地址我第一反应是根据<code>&#39;.&#39;</code>分割字符串然后每个字符挨个判断，手动写格式判断啥的，效率低还麻烦，容易出错，看到楼主那个还挺好玩的，就试了一下。发现了一些问题：</p><details><summary>IPAddress.TryParse()方法</summary><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">string ipStr = &quot;10.1&quot;;</span><br><span class="line">System.Net.IPAddress ip;</span><br><span class="line">if (System.Net.IPAddress.TryParse(ipStr,out ip))</span><br><span class="line">&#123;</span><br><span class="line">    MessageBox.Show(&quot;IP地址合法&quot;);</span><br><span class="line">&#125;</span><br><span class="line">else</span><br><span class="line">&#123;</span><br><span class="line">    MessageBox.Show(&quot;IP地址不合法&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></details><p>这个方法没办法对输入的IP的格式进行判断，测试字符串是<strong>10.1</strong>在测试过程中是可以成功转换的，但是显然输入的IP不是有效地址。可以转换成功的原因是<code>IPAddress.TryParse()</code>方法接受有效的<code>String</code>值，可以分析为一个<code>Int64</code>值，然后将这个值作为IP地址的长值，这就意味着只要接受到的字符串可以成功解析成一个<code>Int64</code>值就会返回<code>True</code>，即使它表示的不是有效的IP地址。<br>微软技术文档在说明该方法时提供了以下注解：</p><blockquote><p>例如，如果 ipString 为“1”，则此方法返回 true，即使“1” (或 0.0.0.1) 不是有效的 IP 地址，你可能期望此方法返回 false。 修复此 bug 会中断现有应用，因此不会更改当前行为。 代码可以通过确保仅使用此方法分析采用点十进制格式的 IP 地址来避免此行为。</p></blockquote><p>楼主评论区中有人提出可以用正则表达式来判断，既能判断格式也能判断数值，一举两得。</p><details><summary>正则表达式</summary><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">System.Text.RegularExpressions.Regex rx = new System.Text.RegularExpressions.Regex(@&quot;\b((?:(?:25[0-5]|2[0-4]\d|((1\d&#123;2&#125;)|([1-9]?\d)))\.)&#123;3&#125;(?:25[0-5]|2[0-4]\d|((1\d&#123;2&#125;)|([1-9]?\d))))\b&quot;);</span><br><span class="line">string ipStr = &quot;10.1&quot;;</span><br><span class="line">if (rx.IsMatch(ipStr) == false)</span><br><span class="line">&#123;</span><br><span class="line">MessageBox.Show(&quot;IP地址不合法&quot;);</span><br><span class="line">return;</span><br><span class="line">&#125;</span><br><span class="line">else</span><br><span class="line">&#123;</span><br><span class="line">MessageBox.Show(&quot;IP地址合法&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></details>Perfect！]]></content>
+    
+    
+    <summary type="html">C# 验证IP地址小妙招</summary>
+    
+    
+    
+    <category term="C#实用小技巧" scheme="https://boiledyakult.top/categories/C-%E5%AE%9E%E7%94%A8%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="C#实用小技巧" scheme="https://boiledyakult.top/tags/C-%E5%AE%9E%E7%94%A8%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
@@ -467,30 +488,6 @@
     
     
     <category term="CSGO" scheme="https://boiledyakult.top/tags/CSGO/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Apex画质设置</title>
-    <link href="https://boiledyakult.top/archives/2bedf69.html"/>
-    <id>https://boiledyakult.top/archives/2bedf69.html</id>
-    <published>2022-04-23T06:52:09.000Z</published>
-    <updated>2023-02-21T12:58:33.219Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="Videoconfig"><a href="#Videoconfig" class="headerlink" title="Videoconfig"></a>Videoconfig</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&quot;VideoConfig&quot;</span><br><span class="line">&#123;</span><br><span class="line">&quot;setting.cl_gib_allow&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.cl_particle_fallback_base&quot;&quot;3&quot;</span><br><span class="line">&quot;setting.cl_particle_fallback_multiplier&quot;&quot;2&quot;</span><br><span class="line">&quot;setting.cl_ragdoll_maxcount&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.cl_ragdoll_self_collision&quot;&quot;1&quot;</span><br><span class="line">&quot;setting.mat_forceaniso&quot;&quot;1&quot;</span><br><span class="line">&quot;setting.mat_mip_linear&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.stream_memory&quot;&quot;300000&quot;</span><br><span class="line">&quot;setting.mat_picmip&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.particle_cpu_level&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.r_createmodeldecals&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.r_decals&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.r_lod_switch_scale&quot;&quot;0.6&quot;</span><br><span class="line">&quot;setting.shadow_enable&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.shadow_depth_dimen_min&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.shadow_depth_upres_factor_max&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.shadow_maxdynamic&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.ssao_enabled&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.ssao_downsample&quot;&quot;3&quot;</span><br><span class="line">&quot;setting.dvs_enable&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.dvs_gpuframetime_min&quot;&quot;15000&quot;</span><br><span class="line">&quot;setting.dvs_gpuframetime_max&quot;&quot;16500&quot;</span><br><span class="line">&quot;setting.defaultres&quot;&quot;1920&quot;</span><br><span class="line">&quot;setting.defaultresheight&quot;&quot;1080&quot;</span><br><span class="line">&quot;setting.fullscreen&quot;&quot;1&quot;</span><br><span class="line">&quot;setting.nowindowborder&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.volumetric_lighting&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.mat_vsync_mode&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.mat_backbuffer_count&quot;&quot;1&quot;</span><br><span class="line">&quot;setting.mat_antialias_mode&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.csm_enabled&quot;&quot;1&quot;</span><br><span class="line">&quot;setting.csm_coverage&quot;&quot;1&quot;</span><br><span class="line">&quot;setting.csm_cascade_res&quot;&quot;512&quot;</span><br><span class="line">&quot;setting.fadeDistScale&quot;&quot;1.000000&quot;</span><br><span class="line">&quot;setting.dvs_supersample_enable&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.gamma&quot;&quot;0.855357&quot;</span><br><span class="line">&quot;setting.configversion&quot;&quot;7&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="游戏内设置"><a href="#游戏内设置" class="headerlink" title="游戏内设置"></a>游戏内设置</h3><p><img src="https://img1.imgtp.com/2022/07/20/VvA8x92r.jpg"><br><img src="https://img1.imgtp.com/2022/07/20/TJ5wNqgz.jpg"><br><img src="https://img1.imgtp.com/2022/07/20/FWbEWtqa.jpg"><br><img src="https://img1.imgtp.com/2022/07/20/KuIqq1WP.jpg"><br><img src="https://img1.imgtp.com/2022/07/20/RQle2a0w.jpg"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    <category term="游戏设置" scheme="https://boiledyakult.top/categories/%E6%B8%B8%E6%88%8F%E8%AE%BE%E7%BD%AE/"/>
-    
-    
-    <category term="Apex Legends" scheme="https://boiledyakult.top/tags/Apex-Legends/"/>
     
   </entry>
   
