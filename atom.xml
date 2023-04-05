@@ -6,7 +6,7 @@
   <link href="https://boiledyakult.top/atom.xml" rel="self"/>
   
   <link href="https://boiledyakult.top/"/>
-  <updated>2023-02-26T04:42:01.000Z</updated>
+  <updated>2023-04-05T07:44:27.000Z</updated>
   <id>https://boiledyakult.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Microsoft Edge 分屏功能推荐</title>
+    <link href="https://boiledyakult.top/archives/a375e98c.html"/>
+    <id>https://boiledyakult.top/archives/a375e98c.html</id>
+    <published>2023-04-05T07:44:27.000Z</published>
+    <updated>2023-04-05T07:44:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><blockquote><p>很早之前就在 Edge Dev 频道的更新公告中看到过 Edge 的新分屏功能，当时没怎么注意，昨天看文档的时候发现 Edge 的侧边栏可以拖动当作一个“虚假的”分屏页面来用，但是体验不是很好就想到了这个新功能，给大家推荐一下，个人觉得蛮好用的。</p></blockquote><h2 id="Microsoft-Edge-Split-Screen"><a href="#Microsoft-Edge-Split-Screen" class="headerlink" title="Microsoft Edge Split Screen"></a>Microsoft Edge Split Screen</h2><p>微软是在 Edge Canary 110 版本更新中发布的 分屏功能： 一个窗口同时浏览两个页面。</p><p>这个功能属于实验性功能，默认是不开启的，需要手动开启，最新版本不管是哪个通道的应该都有这个功能：</p><p>在地址栏粘贴打开下面的地址：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">edge://flags/#edge-split-screen</span><br></pre></td></tr></table></figure><p>向上滑动就能找到 Microsoft Edge Split Screen 选项，更改为 Enabled ，然后重启浏览器就能使用分屏功能了。</p><p>启用后地址栏会出现一个分屏按钮（Split Window），点击即可切换，在右侧选择已经开启的页面，或者点击打开新标签等等。</p><p>当然了，单机最上方的标签页还是会新打开一个页面，互不影响。</p><p><img src="https://img2023.cnblogs.com/blog/2913706/202303/2913706-20230331095135260-949101308.gif" alt="Split"></p><p>单个页面上的有个小按钮可以选择这个页面的链接点击后是这个页面显示还是在右侧页面显示，大家可以自己选择，需要注意的是，右侧页面选择新链接在右侧页面打开是无效的，因为一屏只能同时显示两个标签页。</p><p><img src="https://img2023.cnblogs.com/blog/2913706/202303/2913706-20230331095349278-1727787523.png" alt="image-20230331095348578"></p>]]></content>
+    
+    
+    <summary type="html">很早之前就在 Edge Dev 频道的更新公告中看到过 Edge 的新分屏功能，当时没怎么注意，昨天看文档的时候发现 Edge 的侧边栏可以拖动当作一个“虚假的”分屏页面来用，但是体验不是很好就想到了这个新功能，给大家推荐一下，个人觉得蛮好用的。</summary>
+    
+    
+    
+    <category term="Edge 实用小功能" scheme="https://boiledyakult.top/categories/Edge-%E5%AE%9E%E7%94%A8%E5%B0%8F%E5%8A%9F%E8%83%BD/"/>
+    
+    
+    <category term="Microsoft Edge" scheme="https://boiledyakult.top/tags/Microsoft-Edge/"/>
+    
+    <category term="Edge Way" scheme="https://boiledyakult.top/tags/Edge-Way/"/>
+    
+  </entry>
   
   <entry>
     <title>Winform程序制作安装包</title>
@@ -461,30 +484,6 @@
     
     
     <category term="CSGO" scheme="https://boiledyakult.top/tags/CSGO/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Apex画质设置</title>
-    <link href="https://boiledyakult.top/archives/2bedf69.html"/>
-    <id>https://boiledyakult.top/archives/2bedf69.html</id>
-    <published>2022-04-23T06:52:09.000Z</published>
-    <updated>2023-02-21T12:58:33.219Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="Videoconfig"><a href="#Videoconfig" class="headerlink" title="Videoconfig"></a>Videoconfig</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&quot;VideoConfig&quot;</span><br><span class="line">&#123;</span><br><span class="line">&quot;setting.cl_gib_allow&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.cl_particle_fallback_base&quot;&quot;3&quot;</span><br><span class="line">&quot;setting.cl_particle_fallback_multiplier&quot;&quot;2&quot;</span><br><span class="line">&quot;setting.cl_ragdoll_maxcount&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.cl_ragdoll_self_collision&quot;&quot;1&quot;</span><br><span class="line">&quot;setting.mat_forceaniso&quot;&quot;1&quot;</span><br><span class="line">&quot;setting.mat_mip_linear&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.stream_memory&quot;&quot;300000&quot;</span><br><span class="line">&quot;setting.mat_picmip&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.particle_cpu_level&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.r_createmodeldecals&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.r_decals&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.r_lod_switch_scale&quot;&quot;0.6&quot;</span><br><span class="line">&quot;setting.shadow_enable&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.shadow_depth_dimen_min&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.shadow_depth_upres_factor_max&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.shadow_maxdynamic&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.ssao_enabled&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.ssao_downsample&quot;&quot;3&quot;</span><br><span class="line">&quot;setting.dvs_enable&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.dvs_gpuframetime_min&quot;&quot;15000&quot;</span><br><span class="line">&quot;setting.dvs_gpuframetime_max&quot;&quot;16500&quot;</span><br><span class="line">&quot;setting.defaultres&quot;&quot;1920&quot;</span><br><span class="line">&quot;setting.defaultresheight&quot;&quot;1080&quot;</span><br><span class="line">&quot;setting.fullscreen&quot;&quot;1&quot;</span><br><span class="line">&quot;setting.nowindowborder&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.volumetric_lighting&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.mat_vsync_mode&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.mat_backbuffer_count&quot;&quot;1&quot;</span><br><span class="line">&quot;setting.mat_antialias_mode&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.csm_enabled&quot;&quot;1&quot;</span><br><span class="line">&quot;setting.csm_coverage&quot;&quot;1&quot;</span><br><span class="line">&quot;setting.csm_cascade_res&quot;&quot;512&quot;</span><br><span class="line">&quot;setting.fadeDistScale&quot;&quot;1.000000&quot;</span><br><span class="line">&quot;setting.dvs_supersample_enable&quot;&quot;0&quot;</span><br><span class="line">&quot;setting.gamma&quot;&quot;0.855357&quot;</span><br><span class="line">&quot;setting.configversion&quot;&quot;7&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="游戏内设置"><a href="#游戏内设置" class="headerlink" title="游戏内设置"></a>游戏内设置</h3><p><img src="https://img1.imgtp.com/2022/07/20/VvA8x92r.jpg"><br><img src="https://img1.imgtp.com/2022/07/20/TJ5wNqgz.jpg"><br><img src="https://img1.imgtp.com/2022/07/20/FWbEWtqa.jpg"><br><img src="https://img1.imgtp.com/2022/07/20/KuIqq1WP.jpg"><br><img src="https://img1.imgtp.com/2022/07/20/RQle2a0w.jpg"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    <category term="游戏设置" scheme="https://boiledyakult.top/categories/%E6%B8%B8%E6%88%8F%E8%AE%BE%E7%BD%AE/"/>
-    
-    
-    <category term="Apex Legends" scheme="https://boiledyakult.top/tags/Apex-Legends/"/>
     
   </entry>
   

@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Microsoft Edge 分屏功能推荐</title>
+      <link href="/archives/a375e98c.html"/>
+      <url>/archives/a375e98c.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><blockquote><p>很早之前就在 Edge Dev 频道的更新公告中看到过 Edge 的新分屏功能，当时没怎么注意，昨天看文档的时候发现 Edge 的侧边栏可以拖动当作一个“虚假的”分屏页面来用，但是体验不是很好就想到了这个新功能，给大家推荐一下，个人觉得蛮好用的。</p></blockquote><h2 id="Microsoft-Edge-Split-Screen"><a href="#Microsoft-Edge-Split-Screen" class="headerlink" title="Microsoft Edge Split Screen"></a>Microsoft Edge Split Screen</h2><p>微软是在 Edge Canary 110 版本更新中发布的 分屏功能： 一个窗口同时浏览两个页面。</p><p>这个功能属于实验性功能，默认是不开启的，需要手动开启，最新版本不管是哪个通道的应该都有这个功能：</p><p>在地址栏粘贴打开下面的地址：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">edge://flags/#edge-split-screen</span><br></pre></td></tr></table></figure><p>向上滑动就能找到 Microsoft Edge Split Screen 选项，更改为 Enabled ，然后重启浏览器就能使用分屏功能了。</p><p>启用后地址栏会出现一个分屏按钮（Split Window），点击即可切换，在右侧选择已经开启的页面，或者点击打开新标签等等。</p><p>当然了，单机最上方的标签页还是会新打开一个页面，互不影响。</p><p><img src="https://img2023.cnblogs.com/blog/2913706/202303/2913706-20230331095135260-949101308.gif" alt="Split"></p><p>单个页面上的有个小按钮可以选择这个页面的链接点击后是这个页面显示还是在右侧页面显示，大家可以自己选择，需要注意的是，右侧页面选择新链接在右侧页面打开是无效的，因为一屏只能同时显示两个标签页。</p><p><img src="https://img2023.cnblogs.com/blog/2913706/202303/2913706-20230331095349278-1727787523.png" alt="image-20230331095348578"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Edge 实用小功能 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Microsoft Edge </tag>
+            
+            <tag> Edge Way </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Winform程序制作安装包</title>
       <link href="/archives/a76b87d6.html"/>
       <url>/archives/a76b87d6.html</url>
